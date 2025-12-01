@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MixBanana | Enterprise AI Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        
+        /* Language-Specific Font Overrides to fix "Buggy" CJK Rendering */
+        html[lang="zh-CN"] body { font-family: 'Noto Sans SC', 'Inter', sans-serif; }
+        html[lang="zh-TW"] body { font-family: 'Noto Sans TC', 'Inter', sans-serif; }
+        html[lang="ja"] body { font-family: 'Noto Sans JP', 'Inter', sans-serif; }
+        html[lang="ko"] body { font-family: 'Noto Sans KR', 'Inter', sans-serif; }
+        html[lang="ar"] body { font-family: 'Noto Sans Arabic', 'Inter', sans-serif; }
+        html[lang="th"] body { font-family: 'Noto Sans Thai', 'Inter', sans-serif; }
+
+        .banana-yellow {
+            color: #FFE135;
+        }
+        .bg-banana-yellow {
+            background-color: #FFE135;
+        }
+        .hover-banana-yellow:hover {
+            background-color: #E6CB2F;
+        }
+        .glass-card {
+            background: rgba(17, 17, 17, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect {
+            box-shadow: 0 0 60px -15px rgba(255, 225, 53, 0.15);
+        }
+        /* Custom Scrollbar for Language Dropdown */
+        select option {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-[#FFE135] selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto relative z-50">
+        <div class="flex items-center gap-3">
+            <!-- Logo Icon -->
+            <div class="w-10 h-10 bg-banana-yellow rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,225,53,0.3)] shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5 13.5C8.5 13.5 10 16 14.5 16C19 16 20.5 12 20.5 12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 21C12 21 6 20 4 14C2 8 6 3 12 3" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span class="text-xl font-bold tracking-tight">MixBanana</span>
+        </div>
+        
+        <div class="flex items-center gap-4 md:gap-6">
+            <div class="hidden md:flex gap-6 text-sm text-gray-400">
+                <span data-i18n="nav_enterprise">Enterprise</span>
+                <span data-i18n="nav_solutions">Solutions</span>
+                <span data-i18n="nav_research">Research</span>
+            </div>
+            
+            <!-- Language Switcher -->
+            <div class="relative">
+                <select id="language-selector" onchange="changeLanguage(this.value)" class="appearance-none bg-[#111] border border-white/10 text-gray-300 text-xs py-2 pl-3 pr-8 rounded-lg focus:outline-none focus:border-[#FFE135] cursor-pointer hover:bg-[#1a1a1a] transition-colors">
+                    <option value="en">English</option>
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="pl">Polski</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="th">ไทย</option>
+                    <option value="vi">Tiếng Việt</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-center px-6 mt-12 md:mt-20 max-w-7xl mx-auto w-full">
+        
+        <!-- Hero Text -->
+        <div class="text-center max-w-2xl mb-16">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-medium tracking-wider text-banana-yellow uppercase border border-white/10 rounded-full bg-white/5" data-i18n="hero_badge">
+                The Future of Marketing
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <span data-i18n="hero_title_prefix">Next-Gen</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFE135] to-[#fffab0]" data-i18n="hero_title_highlight">AI Solutions</span><br> <span data-i18n="hero_title_suffix">for Global Brands.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl leading-relaxed" data-i18n="hero_subtitle">
+                MixBanana is building the infrastructure for the next era of automated creativity. 
+                We engineer enterprise-grade AI tools that scale your marketing impact.
+            </p>
+        </div>
+
+        <!-- Product Showcase Card -->
+        <div class="w-full max-w-4xl relative group">
+            <!-- Glow behind card -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-banana-yellow/20 to-purple-500/20 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+            
+            <div class="relative glass-card rounded-xl p-1 md:p-2 overflow-hidden glow-effect">
+                <div class="bg-[#0f0f0f] rounded-lg overflow-hidden flex flex-col md:flex-row">
+                    
+                    <!-- Left: Text Content -->
+                    <div class="p-8 md:p-10 flex flex-col justify-center w-full md:w-1/2 order-2 md:order-1">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="bg-[#FFE135] text-black text-[10px] font-bold px-2 py-0.5 rounded" data-i18n="card_beta">BETA</span>
+                            <span class="text-gray-500 text-sm font-medium" data-i18n="card_flagship">Flagship Product</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-3" data-i18n="card_title">MixBanana by Nano Banana Pro</h2>
+                        <p class="text-gray-400 mb-8 text-sm leading-relaxed" data-i18n="card_desc">
+                            A specialized marketing creative generator. Create high-fidelity, multi-language, and multi-ratio assets in seconds using our Bring-Your-Own-Key infrastructure.
+                        </p>
+                        
+                        <a href="https://beta.mixbanana.com" target="_blank" class="w-full md:w-auto bg-banana-yellow hover-banana-yellow text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 group/btn">
+                            <span data-i18n="card_cta">Launch App</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rtl:rotate-180"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </a>
+                    </div>
+
+                    <!-- Right: Visual/Screenshot Mimic -->
+                    <div class="w-full md:w-1/2 bg-[#1a1a1a] relative min-h-[250px] md:min-h-auto order-1 md:order-2 flex items-center justify-center border-b md:border-b-0 md:border-l border-white/5">
+                        <!-- Abstract representation of the dashboard -->
+                        <div class="relative w-3/4 aspect-video bg-[#0a0a0a] rounded border border-white/10 shadow-2xl flex flex-col p-3">
+                            <div class="w-full h-2 bg-white/10 rounded-full mb-3 w-1/3"></div>
+                            <div class="flex-grow flex items-center justify-center">
+                                <div class="w-12 h-12 rounded-full border-2 border-[#FFE135] flex items-center justify-center text-[#FFE135]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </div>
+                            </div>
+                            <div class="w-full h-8 bg-white/5 rounded mt-3 border border-dashed border-white/10 flex items-center justify-center text-[10px] text-gray-600" data-i18n="dashboard_loading">
+                                Generating Creative Assets...
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Roadmap Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 w-full max-w-4xl text-center md:text-left rtl:md:text-right">
+            <div class="p-4 border border-white/5 rounded-lg bg-white/[0.02]">
+                <div class="text-banana-yellow mb-2 text-lg">✦</div>
+                <h3 class="font-semibold mb-1" data-i18n="feat_1_title">Global Localization</h3>
+                <p class="text-xs text-gray-500" data-i18n="feat_1_desc">Upcoming tools for instant language and cultural adaptation.</p>
+            </div>
+            <div class="p-4 border border-white/5 rounded-lg bg-white/[0.02]">
+                <div class="text-banana-yellow mb-2 text-lg">✦</div>
+                <h3 class="font-semibold mb-1" data-i18n="feat_2_title">Video Synthesis</h3>
+                <p class="text-xs text-gray-500" data-i18n="feat_2_desc">Researching next-gen video models for social commerce.</p>
+            </div>
+            <div class="p-4 border border-white/5 rounded-lg bg-white/[0.02]">
+                <div class="text-banana-yellow mb-2 text-lg">✦</div>
+                <h3 class="font-semibold mb-1" data-i18n="feat_3_title">Agentic Workflows</h3>
+                <p class="text-xs text-gray-500" data-i18n="feat_3_desc">Fully autonomous marketing campaign management.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 mt-20 border-t border-white/5 text-center text-gray-600 text-xs">
+        <p data-i18n="footer_rights">&copy; 2025 MixBanana. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            "en": {
+                "nav_enterprise": "Enterprise",
+                "nav_solutions": "Solutions",
+                "nav_research": "Research",
+                "hero_badge": "The Future of Marketing",
+                "hero_title_prefix": "Next-Gen",
+                "hero_title_highlight": "AI Solutions",
+                "hero_title_suffix": "for Global Brands.",
+                "hero_subtitle": "MixBanana is building the infrastructure for the next era of automated creativity. We engineer enterprise-grade AI tools that scale your marketing impact.",
+                "card_beta": "BETA",
+                "card_flagship": "Flagship Product",
+                "card_title": "MixBanana by Nano Banana Pro",
+                "card_desc": "A specialized marketing creative generator. Create high-fidelity, multi-language, and multi-ratio assets in seconds using our Bring-Your-Own-Key infrastructure.",
+                "card_cta": "Launch App",
+                "dashboard_loading": "Generating Creative Assets...",
+                "feat_1_title": "Global Localization",
+                "feat_1_desc": "Upcoming tools for instant language and cultural adaptation.",
+                "feat_2_title": "Video Synthesis",
+                "feat_2_desc": "Researching next-gen video models for social commerce.",
+                "feat_3_title": "Agentic Workflows",
+                "feat_3_desc": "Fully autonomous marketing campaign management.",
+                "footer_rights": "&copy; 2025 MixBanana. All rights reserved."
+            },
+            "zh-CN": {
+                "nav_enterprise": "企业版",
+                "nav_solutions": "解决方案",
+                "nav_research": "研究",
+                "hero_badge": "营销的未来",
+                "hero_title_prefix": "面向全球品牌的",
+                "hero_title_highlight": "下一代 AI 解决方案",
+                "hero_title_suffix": "",
+                "hero_subtitle": "MixBanana 正在为自动创意的新时代构建基础设施。我们要打造企业级 AI 工具，以此扩大您的营销影响力。",
+                "card_beta": "测试版",
+                "card_flagship": "旗舰产品",
+                "card_title": "Nano Banana Pro 驱动的 MixBanana",
+                "card_desc": "专业的营销创意生成器。使用我们自带密钥（BYOK）的基础设施，在几秒钟内创建高保真、多语言和多种比例的资产。",
+                "card_cta": "启动应用",
+                "dashboard_loading": "正在生成创意资产...",
+                "feat_1_title": "全球本地化",
+                "feat_1_desc": "即将推出的即时语言和文化适应工具。",
+                "feat_2_title": "视频合成",
+                "feat_2_desc": "研究面向社交电商的下一代视频模型。",
+                "feat_3_title": "智能体工作流",
+                "feat_3_desc": "全自动营销活动管理。",
+                "footer_rights": "&copy; 2025 MixBanana. 保留所有权利。"
+            },
+            "zh-TW": {
+                "nav_enterprise": "企業版",
+                "nav_solutions": "解決方案",
+                "nav_research": "研究",
+                "hero_badge": "行銷的未來",
+                "hero_title_prefix": "面向全球品牌的",
+                "hero_title_highlight": "下一代 AI 解決方案",
+                "hero_title_suffix": "",
+                "hero_subtitle": "MixBanana 正在為自動創意的新時代構建基礎設施。我們打造企業級 AI 工具，擴大您的行銷影響力。",
+                "card_beta": "測試版",
+                "card_flagship": "旗艦產品",
+                "card_title": "Nano Banana Pro 驅動的 MixBanana",
+                "card_desc": "專業的行銷創意生成器。使用我們自帶密鑰（BYOK）的基礎設施，在幾秒鐘內創建高保真、多語言和多種比例的資產。",
+                "card_cta": "啟動應用",
+                "dashboard_loading": "正在生成創意資產...",
+                "feat_1_title": "全球在地化",
+                "feat_1_desc": "即將推出的即時語言和文化適應工具。",
+                "feat_2_title": "影片合成",
+                "feat_2_desc": "研究面向社群電商的下一代影片模型。",
+                "feat_3_title": "智能體工作流",
+                "feat_3_desc": "全自動行銷活動管理。",
+                "footer_rights": "&copy; 2025 MixBanana. 保留所有權利。"
+            },
+            "es": {
+                "nav_enterprise": "Empresa",
+                "nav_solutions": "Soluciones",
+                "nav_research": "Investigación",
+                "hero_badge": "El Futuro del Marketing",
+                "hero_title_prefix": "Soluciones de IA de",
+                "hero_title_highlight": "Próxima Generación",
+                "hero_title_suffix": "para Marcas Globales.",
+                "hero_subtitle": "MixBanana está construyendo la infraestructura para la nueva era de la creatividad automatizada. Diseñamos herramientas de IA empresariales que escalan su impacto de marketing.",
+                "card_beta": "BETA",
+                "card_flagship": "Producto Estrella",
+                "card_title": "MixBanana por Nano Banana Pro",
+                "card_desc": "Un generador creativo de marketing especializado. Cree activos de alta fidelidad, en múltiples idiomas y relaciones de aspecto en segundos.",
+                "card_cta": "Iniciar App",
+                "dashboard_loading": "Generando Activos Creativos...",
+                "feat_1_title": "Localización Global",
+                "feat_1_desc": "Herramientas para adaptación cultural e idiomática instantánea.",
+                "feat_2_title": "Síntesis de Video",
+                "feat_2_desc": "Modelos de video de próxima generación para comercio social.",
+                "feat_3_title": "Flujos de Agentes",
+                "feat_3_desc": "Gestión de campañas de marketing totalmente autónoma.",
+                "footer_rights": "&copy; 2025 MixBanana. Todos los derechos reservados."
+            },
+            "pt": {
+                "nav_enterprise": "Empresarial",
+                "nav_solutions": "Soluções",
+                "nav_research": "Pesquisa",
+                "hero_badge": "O Futuro do Marketing",
+                "hero_title_prefix": "Soluções de IA de",
+                "hero_title_highlight": "Próxima Geração",
+                "hero_title_suffix": "para Marcas Globais.",
+                "hero_subtitle": "A MixBanana está construindo a infraestrutura para a próxima era da criatividade automatizada. Engenheiramos ferramentas de IA que escalam seu impacto de marketing.",
+                "card_beta": "BETA",
+                "card_flagship": "Produto Principal",
+                "card_title": "MixBanana por Nano Banana Pro",
+                "card_desc": "Um gerador criativo de marketing especializado. Crie ativos de alta fidelidade, multi-idioma e multi-formato em segundos.",
+                "card_cta": "Iniciar App",
+                "dashboard_loading": "Gerando Ativos Criativos...",
+                "feat_1_title": "Localização Global",
+                "feat_1_desc": "Ferramentas para adaptação cultural e linguística instantânea.",
+                "feat_2_title": "Síntese de Vídeo",
+                "feat_2_desc": "Pesquisando modelos de vídeo de próxima geração para social commerce.",
+                "feat_3_title": "Fluxos de Agentes",
+                "feat_3_desc": "Gestão de campanhas de marketing totalmente autônoma.",
+                "footer_rights": "&copy; 2025 MixBanana. Todos os direitos reservados."
+            },
+            "fr": {
+                "nav_enterprise": "Entreprise",
+                "nav_solutions": "Solutions",
+                "nav_research": "Recherche",
+                "hero_badge": "L'Avenir du Marketing",
+                "hero_title_prefix": "Solutions IA de",
+                "hero_title_highlight": "Nouvelle Génération",
+                "hero_title_suffix": "pour les Marques Mondiales.",
+                "hero_subtitle": "MixBanana construit l'infrastructure de la nouvelle ère de la créativité automatisée. Nous concevons des outils IA d'entreprise pour décupler votre impact marketing.",
+                "card_beta": "BÊTA",
+                "card_flagship": "Produit Phare",
+                "card_title": "MixBanana par Nano Banana Pro",
+                "card_desc": "Générateur créatif marketing spécialisé. Créez des actifs haute fidélité, multilingues et multi-formats en quelques secondes.",
+                "card_cta": "Lancer l'App",
+                "dashboard_loading": "Génération des Actifs...",
+                "feat_1_title": "Localisation Globale",
+                "feat_1_desc": "Outils pour l'adaptation linguistique et culturelle instantanée.",
+                "feat_2_title": "Synthèse Vidéo",
+                "feat_2_desc": "Modèles vidéo de nouvelle génération pour le commerce social.",
+                "feat_3_title": "Flux Agentiques",
+                "feat_3_desc": "Gestion de campagnes marketing totalement autonome.",
+                "footer_rights": "&copy; 2025 MixBanana. Tous droits réservés."
+            },
+            "de": {
+                "nav_enterprise": "Unternehmen",
+                "nav_solutions": "Lösungen",
+                "nav_research": "Forschung",
+                "hero_badge": "Die Zukunft des Marketings",
+                "hero_title_prefix": "Next-Gen",
+                "hero_title_highlight": "KI-Lösungen",
+                "hero_title_suffix": "für Globale Marken.",
+                "hero_subtitle": "MixBanana baut die Infrastruktur für die nächste Ära der automatisierten Kreativität. Wir entwickeln KI-Tools, die Ihren Marketing-Impact skalieren.",
+                "card_beta": "BETA",
+                "card_flagship": "Flaggschiff-Produkt",
+                "card_title": "MixBanana von Nano Banana Pro",
+                "card_desc": "Ein spezialisierter Marketing-Generator. Erstellen Sie in Sekunden High-Fidelity-, mehrsprachige und multiformatige Assets.",
+                "card_cta": "App Starten",
+                "dashboard_loading": "Generiere Assets...",
+                "feat_1_title": "Globale Lokalisierung",
+                "feat_1_desc": "Tools für sofortige sprachliche und kulturelle Anpassung.",
+                "feat_2_title": "Video-Synthese",
+                "feat_2_desc": "Forschung an Next-Gen-Videomodellen für Social Commerce.",
+                "feat_3_title": "Agentische Workflows",
+                "feat_3_desc": "Vollautonomes Marketing-Kampagnenmanagement.",
+                "footer_rights": "&copy; 2025 MixBanana. Alle Rechte vorbehalten."
+            },
+            "it": {
+                "nav_enterprise": "Impresa",
+                "nav_solutions": "Soluzioni",
+                "nav_research": "Ricerca",
+                "hero_badge": "Il Futuro del Marketing",
+                "hero_title_prefix": "Soluzioni AI di",
+                "hero_title_highlight": "Nuova Generazione",
+                "hero_title_suffix": "per Brand Globali.",
+                "hero_subtitle": "MixBanana sta costruendo l'infrastruttura per la nuova era della creatività automatizzata. Progettiamo strumenti AI aziendali che scalano il tuo impatto marketing.",
+                "card_beta": "BETA",
+                "card_flagship": "Prodotto di Punta",
+                "card_title": "MixBanana di Nano Banana Pro",
+                "card_desc": "Un generatore creativo di marketing specializzato. Crea asset ad alta fedeltà, multilingua e multiformato in pochi secondi.",
+                "card_cta": "Avvia App",
+                "dashboard_loading": "Generazione Asset...",
+                "feat_1_title": "Localizzazione Globale",
+                "feat_1_desc": "Strumenti per l'adattamento linguistico e culturale istantaneo.",
+                "feat_2_title": "Sintesi Video",
+                "feat_2_desc": "Modelli video di nuova generazione per il social commerce.",
+                "feat_3_title": "Flussi Agenti",
+                "feat_3_desc": "Gestione campagne marketing completamente autonoma.",
+                "footer_rights": "&copy; 2025 MixBanana. Tutti i diritti riservati."
+            },
+            "pl": {
+                "nav_enterprise": "Przedsiębiorstwo",
+                "nav_solutions": "Rozwiązania",
+                "nav_research": "Badania",
+                "hero_badge": "Przyszłość Marketingu",
+                "hero_title_prefix": "Rozwiązania AI",
+                "hero_title_highlight": "Nowej Generacji",
+                "hero_title_suffix": "dla Globalnych Marek.",
+                "hero_subtitle": "MixBanana buduje infrastrukturę dla nowej ery zautomatyzowanej kreatywności. Tworzymy narzędzia AI klasy enterprise, które skalują Twój wpływ marketingowy.",
+                "card_beta": "BETA",
+                "card_flagship": "Flagowy Produkt",
+                "card_title": "MixBanana od Nano Banana Pro",
+                "card_desc": "Specjalistyczny generator kreatywny dla marketingu. Twórz wysokiej jakości zasoby w wielu językach i formatach w kilka sekund.",
+                "card_cta": "Uruchom Aplikację",
+                "dashboard_loading": "Generowanie Zasobów...",
+                "feat_1_title": "Globalna Lokalizacja",
+                "feat_1_desc": "Narzędzia do natychmiastowej adaptacji językowej i kulturowej.",
+                "feat_2_title": "Synteza Wideo",
+                "feat_2_desc": "Badania nad modelami wideo nowej generacji dla social commerce.",
+                "feat_3_title": "Przepływy Agenckie",
+                "feat_3_desc": "W pełni autonomiczne zarządzanie kampaniami marketingowymi.",
+                "footer_rights": "&copy; 2025 MixBanana. Wszelkie prawa zastrzeżone."
+            },
+            "ar": {
+                "nav_enterprise": "مؤسسة",
+                "nav_solutions": "حلول",
+                "nav_research": "أبحاث",
+                "hero_badge": "مستقبل التسويق",
+                "hero_title_prefix": "حلول ذكاء اصطناعي",
+                "hero_title_highlight": "من الجيل القادم",
+                "hero_title_suffix": "للعلامات التجارية العالمية.",
+                "hero_subtitle": "تبني MixBanana البنية التحتية للعصر الجديد من الإبداع الآلي. نصمم أدوات ذكاء اصطناعي لزيادة تأثيرك التسويقي.",
+                "card_beta": "بيتا",
+                "card_flagship": "المنتج الرائد",
+                "card_title": "MixBanana بواسطة Nano Banana Pro",
+                "card_desc": "مولد إبداعي تسويقي متخصص. أنشئ أصولاً عالية الدقة ومتعددة اللغات والأبعاد في ثوانٍ.",
+                "card_cta": "تشغيل التطبيق",
+                "dashboard_loading": "جاري إنشاء الأصول...",
+                "feat_1_title": "التعريب العالمي",
+                "feat_1_desc": "أدوات للتكيف اللغوي والثقافي الفوري.",
+                "feat_2_title": "توليف الفيديو",
+                "feat_2_desc": "بحث في نماذج الفيديو من الجيل القادم للتجارة الاجتماعية.",
+                "feat_3_title": "سير عمل الوكيل",
+                "feat_3_desc": "إدارة حملات تسويقية ذاتية بالكامل.",
+                "footer_rights": "&copy; 2025 MixBanana. جميع الحقوق محفوظة."
+            },
+            "id": {
+                "nav_enterprise": "Perusahaan",
+                "nav_solutions": "Solusi",
+                "nav_research": "Riset",
+                "hero_badge": "Masa Depan Pemasaran",
+                "hero_title_prefix": "Solusi AI",
+                "hero_title_highlight": "Generasi Berikutnya",
+                "hero_title_suffix": "untuk Merek Global.",
+                "hero_subtitle": "MixBanana membangun infrastruktur untuk era baru kreativitas otomatis. Kami merancang alat AI tingkat perusahaan yang meningkatkan dampak pemasaran Anda.",
+                "card_beta": "BETA",
+                "card_flagship": "Produk Unggulan",
+                "card_title": "MixBanana oleh Nano Banana Pro",
+                "card_desc": "Generator kreatif pemasaran khusus. Buat aset berkualitas tinggi, multi-bahasa, dan multi-rasio dalam hitungan detik.",
+                "card_cta": "Buka Aplikasi",
+                "dashboard_loading": "Membuat Aset Kreatif...",
+                "feat_1_title": "Lokalisasi Global",
+                "feat_1_desc": "Alat untuk adaptasi bahasa dan budaya instan.",
+                "feat_2_title": "Sintesis Video",
+                "feat_2_desc": "Meneliti model video generasi berikutnya untuk social commerce.",
+                "feat_3_title": "Alur Kerja Agen",
+                "feat_3_desc": "Manajemen kampanye pemasaran yang sepenuhnya otonom.",
+                "footer_rights": "&copy; 2025 MixBanana. Hak cipta dilindungi undang-undang."
+            },
+            "ms": {
+                "nav_enterprise": "Perusahaan",
+                "nav_solutions": "Penyelesaian",
+                "nav_research": "Penyelidikan",
+                "hero_badge": "Masa Depan Pemasaran",
+                "hero_title_prefix": "Penyelesaian AI",
+                "hero_title_highlight": "Generasi Seterusnya",
+                "hero_title_suffix": "untuk Jenama Global.",
+                "hero_subtitle": "MixBanana sedang membina infrastruktur untuk era baru kreativiti automatik. Kami membina alat AI gred perusahaan yang meningkatkan impak pemasaran anda.",
+                "card_beta": "BETA",
+                "card_flagship": "Produk Utama",
+                "card_title": "MixBanana oleh Nano Banana Pro",
+                "card_desc": "Penjana kreatif pemasaran khusus. Cipta aset berkualiti tinggi, pelbagai bahasa dan nisbah dalam beberapa saat.",
+                "card_cta": "Lancar Aplikasi",
+                "dashboard_loading": "Menjana Aset Kreatif...",
+                "feat_1_title": "Lokalisasi Global",
+                "feat_1_desc": "Alat untuk adaptasi bahasa dan budaya segera.",
+                "feat_2_title": "Sintesis Video",
+                "feat_2_desc": "Menyelidik model video generasi seterusnya untuk perdagangan sosial.",
+                "feat_3_title": "Aliran Kerja Ejen",
+                "feat_3_desc": "Pengurusan kempen pemasaran autonomi sepenuhnya.",
+                "footer_rights": "&copy; 2025 MixBanana. Hak cipta terpelihara."
+            },
+            "th": {
+                "nav_enterprise": "องค์กร",
+                "nav_solutions": "โซลูชัน",
+                "nav_research": "วิจัย",
+                "hero_badge": "อนาคตของการตลาด",
+                "hero_title_prefix": "โซลูชัน AI",
+                "hero_title_highlight": "ยุคถัดไป",
+                "hero_title_suffix": "สำหรับแบรนด์ระดับโลก",
+                "hero_subtitle": "MixBanana กำลังสร้างโครงสร้างพื้นฐานสำหรับยุคใหม่ของความคิดสร้างสรรค์อัตโนมัติ เราสร้างเครื่องมือ AI ระดับองค์กรที่ขยายผลลัพธ์ทางการตลาดของคุณ",
+                "card_beta": "เบต้า",
+                "card_flagship": "ผลิตภัณฑ์เรือธง",
+                "card_title": "MixBanana โดย Nano Banana Pro",
+                "card_desc": "เครื่องสร้างสรรค์การตลาดเฉพาะทาง สร้างสินทรัพย์ความละเอียดสูง หลากภาษา และหลายสัดส่วนในไม่กี่วินาที",
+                "card_cta": "เปิดแอป",
+                "dashboard_loading": "กำลังสร้างสินทรัพย์...",
+                "feat_1_title": "การปรับให้เข้ากับท้องถิ่น",
+                "feat_1_desc": "เครื่องมือสำหรับการปรับภาษาและวัฒนธรรมทันที",
+                "feat_2_title": "การสังเคราะห์วิดีโอ",
+                "feat_2_desc": "วิจัยโมเดลวิดีโอยุคถัดไปสำหรับการค้าผ่านโซเชียล",
+                "feat_3_title": "เวิร์กโฟลว์ตัวแทน",
+                "feat_3_desc": "การจัดการแคมเปญการตลาดแบบอัตโนมัติเต็มรูปแบบ",
+                "footer_rights": "&copy; 2025 MixBanana. สงวนลิขสิทธิ์."
+            },
+            "vi": {
+                "nav_enterprise": "Doanh nghiệp",
+                "nav_solutions": "Giải pháp",
+                "nav_research": "Nghiên cứu",
+                "hero_badge": "Tương lai của Marketing",
+                "hero_title_prefix": "Giải pháp AI",
+                "hero_title_highlight": "Thế hệ mới",
+                "hero_title_suffix": "cho Thương hiệu Toàn cầu.",
+                "hero_subtitle": "MixBanana đang xây dựng cơ sở hạ tầng cho kỷ nguyên sáng tạo tự động mới. Chúng tôi thiết kế các công cụ AI cấp doanh nghiệp để mở rộng tác động tiếp thị của bạn.",
+                "card_beta": "BETA",
+                "card_flagship": "Sản phẩm Chủ lực",
+                "card_title": "MixBanana bởi Nano Banana Pro",
+                "card_desc": "Trình tạo sáng tạo tiếp thị chuyên dụng. Tạo tài sản độ trung thực cao, đa ngôn ngữ và đa tỷ lệ trong vài giây.",
+                "card_cta": "Mở Ứng dụng",
+                "dashboard_loading": "Đang tạo tài sản...",
+                "feat_1_title": "Bản địa hóa Toàn cầu",
+                "feat_1_desc": "Công cụ thích ứng ngôn ngữ và văn hóa tức thì.",
+                "feat_2_title": "Tổng hợp Video",
+                "feat_2_desc": "Nghiên cứu mô hình video thế hệ mới cho thương mại xã hội.",
+                "feat_3_title": "Quy trình Tác nhân",
+                "feat_3_desc": "Quản lý chiến dịch tiếp thị hoàn toàn tự động.",
+                "footer_rights": "&copy; 2025 MixBanana. Bảo lưu mọi quyền."
+            }
+        };
+
+        function detectAndSetLanguage() {
+            // Get user's preferred language from browser
+            const userLang = navigator.language || navigator.userLanguage;
+            
+            // Try exact match first
+            if (translations[userLang]) {
+                changeLanguage(userLang);
+                document.getElementById('language-selector').value = userLang;
+                return;
+            }
+
+            // Try base language match (e.g., 'es-MX' -> 'es')
+            const baseLang = userLang.split('-')[0];
+            if (translations[baseLang]) {
+                changeLanguage(baseLang);
+                document.getElementById('language-selector').value = baseLang;
+                return;
+            }
+
+            // Fallback to default (English) if no match
+            changeLanguage('en');
+            document.getElementById('language-selector').value = 'en';
+        }
+
+        function changeLanguage(lang) {
+            // Check translation exists
+            if (!translations[lang]) return;
+
+            // 1. Update the HTML Lang Attribute (Critical for correct Font Rendering)
+            const htmlRoot = document.getElementById('html-root');
+            htmlRoot.setAttribute('lang', lang);
+
+            // 2. Handle RTL for Arabic
+            if (lang === 'ar') {
+                htmlRoot.setAttribute('dir', 'rtl');
+            } else {
+                htmlRoot.setAttribute('dir', 'ltr');
+            }
+
+            // Update text content
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+        }
+
+        // Initialize language detection on load
+        window.addEventListener('DOMContentLoaded', detectAndSetLanguage);
+    </script>
+</body>
+</html>
