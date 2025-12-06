@@ -129,10 +129,16 @@
                             A specialized marketing creative generator. Create high-fidelity, multi-language, and multi-ratio assets in seconds using our Bring-Your-Own-Key infrastructure.
                         </p>
                         
-                        <a href="https://beta.mixbanana.com" target="_blank" class="w-full md:w-auto bg-banana-yellow hover-banana-yellow text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 group/btn">
-                            <span data-i18n="card_cta">Launch App</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rtl:rotate-180"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                        </a>
+                        <div class="flex flex-col items-center md:items-start gap-3 w-full md:w-auto">
+                            <a href="https://images.mixbanana.com" target="_blank" class="w-full md:w-auto bg-banana-yellow hover-banana-yellow text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 group/btn">
+                                <span data-i18n="card_cta">Launch App</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rtl:rotate-180"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                            <a href="https://beta.mixbanana.com" target="_blank" class="text-xs text-gray-500 hover:text-[#FFE135] transition-colors flex items-center gap-1">
+                                <span data-i18n="beta_link_text">Beta Version</span>
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rtl:rotate-180"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Right: Visual/Screenshot Mimic -->
@@ -174,6 +180,111 @@
             </div>
         </div>
 
+        <!-- Knowledge Base / Features Section -->
+        <div class="w-full max-w-4xl mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold mb-4" data-i18n="kb_title">Why Choose MixBanana?</h2>
+                <div class="w-12 h-1 bg-banana-yellow mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1: BYOK -->
+                <div class="glass-card p-6 rounded-xl hover:bg-white/[0.02] transition-colors duration-300">
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-4 text-banana-yellow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="kb_feat_1_title">Bring Your Own Key</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed" data-i18n="kb_feat_1_desc">
+                        Very high security. We never store your credentials. Your keys remain on your device, ensuring complete data sovereignty.
+                    </p>
+                </div>
+
+                <!-- Feature 2: OpenRouter -->
+                <div class="glass-card p-6 rounded-xl hover:bg-white/[0.02] transition-colors duration-300">
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-4 text-banana-yellow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="kb_feat_2_title">OpenRouter Reliability</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed" data-i18n="kb_feat_2_desc">
+                        High transparency. Say goodbye to hidden costs. Pay only for what you use with clear, real-time usage tracking.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Automation -->
+                <div class="glass-card p-6 rounded-xl hover:bg-white/[0.02] transition-colors duration-300">
+                    <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center mb-4 text-banana-yellow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="kb_feat_3_title">Automatic Producing</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed" data-i18n="kb_feat_3_desc">
+                        Agent Workflow makes it easy to batch product creatives. Generate hundreds of assets while you sleep.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="w-full max-w-3xl mt-24">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold mb-4" data-i18n="faq_title">Frequently Asked Questions</h2>
+                <div class="w-12 h-1 bg-banana-yellow mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <details class="glass-card rounded-xl group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+                        <span class="font-medium text-white" data-i18n="faq_q1">What API Key do I need to use MixBanana?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-400 mt-0 px-5 pb-5 text-sm leading-relaxed" data-i18n="faq_a1">
+                        You need an OpenRouter API Key. We act as a secure interface for the Gemini 3 Pro model. This ensures you pay the lowest direct provider rates without any markup from us.
+                    </div>
+                </details>
+
+                <!-- Q2 -->
+                <details class="glass-card rounded-xl group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+                        <span class="font-medium text-white" data-i18n="faq_q2">Is my data secure with BYOK?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-400 mt-0 px-5 pb-5 text-sm leading-relaxed" data-i18n="faq_a2">
+                        Yes. "Bring Your Own Key" means we never store your credentials on our servers. Your API key stays locally on your device during the session and is sent directly to the OpenRouter API securely.
+                    </div>
+                </details>
+
+                <!-- Q3 -->
+                <details class="glass-card rounded-xl group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+                        <span class="font-medium text-white" data-i18n="faq_q3">Can I use generated images for commercial ads?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-400 mt-0 px-5 pb-5 text-sm leading-relaxed" data-i18n="faq_a3">
+                        Absolutely. Since you are using your own API key, you own the commercial rights to the assets you generate, subject to OpenRouter and Google's standard commercial terms for the Gemini model.
+                    </div>
+                </details>
+
+                <!-- Q4 -->
+                <details class="glass-card rounded-xl group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer list-none">
+                        <span class="font-medium text-white" data-i18n="faq_q4">What is "Nano Banana Pro"?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-gray-400 mt-0 px-5 pb-5 text-sm leading-relaxed" data-i18n="faq_a4">
+                        It is our specialized implementation of the Gemini 3 Pro Image Preview model. We have fine-tuned the prompt engineering layer to ensure outputs adhere specifically to high-conversion marketing aesthetics.
+                    </div>
+                </details>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -197,6 +308,7 @@
                 "card_title": "MixBanana by Nano Banana Pro",
                 "card_desc": "A specialized marketing creative generator. Create high-fidelity, multi-language, and multi-ratio assets in seconds using our Bring-Your-Own-Key infrastructure.",
                 "card_cta": "Launch App",
+                "beta_link_text": "Beta Version",
                 "dashboard_loading": "Generating Creative Assets...",
                 "feat_1_title": "Global Localization",
                 "feat_1_desc": "Upcoming tools for instant language and cultural adaptation.",
@@ -204,7 +316,23 @@
                 "feat_2_desc": "Researching next-gen video models for social commerce.",
                 "feat_3_title": "Agentic Workflows",
                 "feat_3_desc": "Fully autonomous marketing campaign management.",
-                "footer_rights": "&copy; 2025 MixBanana. All rights reserved."
+                "footer_rights": "&copy; 2025 MixBanana. All rights reserved.",
+                "kb_title": "Why Choose MixBanana?",
+                "kb_feat_1_title": "Bring Your Own Key",
+                "kb_feat_1_desc": "Very high security. We never store your credentials. Your keys remain on your device.",
+                "kb_feat_2_title": "OpenRouter Reliability",
+                "kb_feat_2_desc": "High transparency. Say goodbye to hidden costs. Pay only for what you use.",
+                "kb_feat_3_title": "Automatic Producing",
+                "kb_feat_3_desc": "Agent Workflow makes it easy to batch product creatives. Scale effortlessly.",
+                "faq_title": "Frequently Asked Questions",
+                "faq_q1": "What API Key do I need to use MixBanana?",
+                "faq_a1": "You need an OpenRouter API Key. We act as a secure interface for the Gemini 3 Pro model. This ensures you pay the lowest direct provider rates without any markup from us.",
+                "faq_q2": "Is my data secure with BYOK?",
+                "faq_a2": "Yes. \"Bring Your Own Key\" means we never store your credentials on our servers. Your API key stays locally on your device during the session and is sent directly to the OpenRouter API securely.",
+                "faq_q3": "Can I use generated images for commercial ads?",
+                "faq_a3": "Absolutely. Since you are using your own API key, you own the commercial rights to the assets you generate, subject to OpenRouter and Google's standard commercial terms for the Gemini model.",
+                "faq_q4": "What is \"Nano Banana Pro\"?",
+                "faq_a4": "It is our specialized implementation of the Gemini 3 Pro Image Preview model. We have fine-tuned the prompt engineering layer to ensure outputs adhere specifically to high-conversion marketing aesthetics."
             },
             "zh-CN": {
                 "nav_enterprise": "企业版",
@@ -220,6 +348,7 @@
                 "card_title": "Nano Banana Pro 驱动的 MixBanana",
                 "card_desc": "专业的营销创意生成器。使用我们自带密钥（BYOK）的基础设施，在几秒钟内创建高保真、多语言和多种比例的资产。",
                 "card_cta": "启动应用",
+                "beta_link_text": "访问测试版",
                 "dashboard_loading": "正在生成创意资产...",
                 "feat_1_title": "全球本地化",
                 "feat_1_desc": "即将推出的即时语言和文化适应工具。",
@@ -227,7 +356,23 @@
                 "feat_2_desc": "研究面向社交电商的下一代视频模型。",
                 "feat_3_title": "智能体工作流",
                 "feat_3_desc": "全自动营销活动管理。",
-                "footer_rights": "&copy; 2025 MixBanana. 保留所有权利。"
+                "footer_rights": "&copy; 2025 MixBanana. 保留所有权利。",
+                "kb_title": "为什么选择 MixBanana？",
+                "kb_feat_1_title": "自带密钥 (BYOK)",
+                "kb_feat_1_desc": "极高的安全性。我们从不存储您的凭据。您的密钥保留在您的设备上。",
+                "kb_feat_2_title": "OpenRouter 可靠性",
+                "kb_feat_2_desc": "高度透明。告别隐性成本。只为您使用的部分付费。",
+                "kb_feat_3_title": "自动化生产",
+                "kb_feat_3_desc": "智能体工作流使批量生产创意变得简单。轻松扩展您的产能。",
+                "faq_title": "常见问题解答",
+                "faq_q1": "使用 MixBanana 需要什么 API 密钥？",
+                "faq_a1": "您需要一个 OpenRouter API 密钥。我们充当 Gemini 3 Pro 模型的安全接口。这确保您支付最低的直接提供商费率，没有任何加价。",
+                "faq_q2": "BYOK 模式下我的数据安全吗？",
+                "faq_a2": "是的。“自带密钥”意味着我们从不在服务器上存储您的凭据。您的 API 密钥在会话期间保留在您的本地设备上，并直接安全地发送到 OpenRouter API。",
+                "faq_q3": "我可以将生成的图片用于商业广告吗？",
+                "faq_a3": "当然。由于您使用的是自己的 API 密钥，您拥有生成资产的商业权利，但需遵守 OpenRouter 和 Google 关于 Gemini 模型的标准商业条款。",
+                "faq_q4": "什么是“Nano Banana Pro”？",
+                "faq_a4": "它是我们对 Gemini 3 Pro Image Preview 模型的专业化实现。我们微调了提示工程层，以确保输出特别符合高转化率的营销美学。"
             },
             "zh-TW": {
                 "nav_enterprise": "企業版",
@@ -243,6 +388,7 @@
                 "card_title": "Nano Banana Pro 驅動的 MixBanana",
                 "card_desc": "專業的行銷創意生成器。使用我們自帶密鑰（BYOK）的基礎設施，在幾秒鐘內創建高保真、多語言和多種比例的資產。",
                 "card_cta": "啟動應用",
+                "beta_link_text": "訪問測試版",
                 "dashboard_loading": "正在生成創意資產...",
                 "feat_1_title": "全球在地化",
                 "feat_1_desc": "即將推出的即時語言和文化適應工具。",
@@ -250,7 +396,23 @@
                 "feat_2_desc": "研究面向社群電商的下一代影片模型。",
                 "feat_3_title": "智能體工作流",
                 "feat_3_desc": "全自動行銷活動管理。",
-                "footer_rights": "&copy; 2025 MixBanana. 保留所有權利。"
+                "footer_rights": "&copy; 2025 MixBanana. 保留所有權利。",
+                "kb_title": "為什麼選擇 MixBanana？",
+                "kb_feat_1_title": "自帶密鑰 (BYOK)",
+                "kb_feat_1_desc": "極高的安全性。我們從不存儲您的憑據。您的密鑰保留在您的設備上。",
+                "kb_feat_2_title": "OpenRouter 可靠性",
+                "kb_feat_2_desc": "高度透明。告別隱藏成本。只為您使用的部分付費。",
+                "kb_feat_3_title": "自動化生產",
+                "kb_feat_3_desc": "智能體工作流使批量生產創意變得簡單。輕鬆擴展您的產能。",
+                "faq_title": "常見問題解答",
+                "faq_q1": "使用 MixBanana 需要什麼 API 密鑰？",
+                "faq_a1": "您需要一個 OpenRouter API 密鑰。我們充當 Gemini 3 Pro 模型的安全接口。這確保您支付最低的直接提供商費率，沒有任何加價。",
+                "faq_q2": "BYOK 模式下我的數據安全嗎？",
+                "faq_a2": "是的。「自帶密鑰」意味著我們從不在服務器上存儲您的憑據。您的 API 密鑰在會話期間保留在您的本地設備上，並直接安全地發送到 OpenRouter API。",
+                "faq_q3": "我可以將生成的圖片用於商業廣告嗎？",
+                "faq_a3": "當然。由於您使用的是自己的 API 密鑰，您擁有生成資產的商業權利，但需遵守 OpenRouter 和 Google 關於 Gemini 模型的標準商業條款。",
+                "faq_q4": "什麼是「Nano Banana Pro」？",
+                "faq_a4": "它是我們對 Gemini 3 Pro Image Preview 模型的專業化實現。我們微調了提示工程層，以確保輸出特別符合高轉化率的行銷美學。"
             },
             "es": {
                 "nav_enterprise": "Empresa",
@@ -266,6 +428,7 @@
                 "card_title": "MixBanana por Nano Banana Pro",
                 "card_desc": "Un generador creativo de marketing especializado. Cree activos de alta fidelidad, en múltiples idiomas y relaciones de aspecto en segundos.",
                 "card_cta": "Iniciar App",
+                "beta_link_text": "Versión Beta",
                 "dashboard_loading": "Generando Activos Creativos...",
                 "feat_1_title": "Localización Global",
                 "feat_1_desc": "Herramientas para adaptación cultural e idiomática instantánea.",
@@ -273,7 +436,23 @@
                 "feat_2_desc": "Modelos de video de próxima generación para comercio social.",
                 "feat_3_title": "Flujos de Agentes",
                 "feat_3_desc": "Gestión de campañas de marketing totalmente autónoma.",
-                "footer_rights": "&copy; 2025 MixBanana. Todos los derechos reservados."
+                "footer_rights": "&copy; 2025 MixBanana. Todos los derechos reservados.",
+                "kb_title": "¿Por qué elegir MixBanana?",
+                "kb_feat_1_title": "Trae tu propia clave (BYOK)",
+                "kb_feat_1_desc": "Seguridad muy alta. No almacenamos tus claves. Permanecen en tu dispositivo.",
+                "kb_feat_2_title": "Fiabilidad de OpenRouter",
+                "kb_feat_2_desc": "Alta transparencia. Di adiós a los costes ocultos.",
+                "kb_feat_3_title": "Producción Automática",
+                "kb_feat_3_desc": "El flujo de trabajo de agentes facilita la producción de creatividades en lote.",
+                "faq_title": "Preguntas Frecuentes",
+                "faq_q1": "¿Qué clave API necesito para usar MixBanana?",
+                "faq_a1": "Necesitas una clave API de OpenRouter. Actuamos como una interfaz segura para el modelo Gemini 3 Pro. Esto asegura que pagues las tarifas más bajas sin recargos.",
+                "faq_q2": "¿Son seguros mis datos con BYOK?",
+                "faq_a2": "Sí. 'Trae Tu Propia Clave' significa que nunca almacenamos tus credenciales. Tu clave permanece en tu dispositivo y se envía directamente a la API de OpenRouter.",
+                "faq_q3": "¿Puedo usar las imágenes para anuncios comerciales?",
+                "faq_a3": "Absolutamente. Como usas tu propia clave, posees los derechos comerciales de los activos que generas, sujeto a los términos estándar de OpenRouter y Google.",
+                "faq_q4": "¿Qué es 'Nano Banana Pro'?",
+                "faq_a4": "Es nuestra implementación especializada del modelo Gemini 3 Pro Image. Hemos ajustado la ingeniería de prompts para asegurar resultados con estética de marketing de alta conversión."
             },
             "pt": {
                 "nav_enterprise": "Empresarial",
@@ -289,6 +468,7 @@
                 "card_title": "MixBanana por Nano Banana Pro",
                 "card_desc": "Um gerador criativo de marketing especializado. Crie ativos de alta fidelidade, multi-idioma e multi-formato em segundos.",
                 "card_cta": "Iniciar App",
+                "beta_link_text": "Versão Beta",
                 "dashboard_loading": "Gerando Ativos Criativos...",
                 "feat_1_title": "Localização Global",
                 "feat_1_desc": "Ferramentas para adaptação cultural e linguística instantânea.",
@@ -296,7 +476,23 @@
                 "feat_2_desc": "Pesquisando modelos de vídeo de próxima geração para social commerce.",
                 "feat_3_title": "Fluxos de Agentes",
                 "feat_3_desc": "Gestão de campanhas de marketing totalmente autônoma.",
-                "footer_rights": "&copy; 2025 MixBanana. Todos os direitos reservados."
+                "footer_rights": "&copy; 2025 MixBanana. Todos os direitos reservados.",
+                "kb_title": "Por que escolher a MixBanana?",
+                "kb_feat_1_title": "Traga sua própria chave (BYOK)",
+                "kb_feat_1_desc": "Segurança muito alta. Não armazenamos suas chaves. Elas permanecem no seu dispositivo.",
+                "kb_feat_2_title": "Confiabilidade OpenRouter",
+                "kb_feat_2_desc": "Alta transparência. Diga adeus aos custos ocultos.",
+                "kb_feat_3_title": "Produção Automática",
+                "kb_feat_3_desc": "Fluxo de trabalho de agentes facilita a produção de criativos em lote.",
+                "faq_title": "Perguntas Frequentes",
+                "faq_q1": "Qual chave API preciso para usar o MixBanana?",
+                "faq_a1": "Você precisa de uma chave API OpenRouter. Atuamos como uma interface segura para o modelo Gemini 3 Pro. Isso garante que você pague as menores taxas diretas.",
+                "faq_q2": "Meus dados estão seguros com BYOK?",
+                "faq_a2": "Sim. 'Traga Sua Própria Chave' significa que nunca armazenamos suas credenciais. Sua chave permanece no seu dispositivo e é enviada diretamente para a API OpenRouter.",
+                "faq_q3": "Posso usar as imagens para anúncios comerciais?",
+                "faq_a3": "Com certeza. Como você usa sua própria chave, você possui os direitos comerciais dos ativos gerados, sujeito aos termos padrão do OpenRouter e Google.",
+                "faq_q4": "O que é 'Nano Banana Pro'?",
+                "faq_a4": "É nossa implementação especializada do modelo Gemini 3 Pro Image. Ajustamos a engenharia de prompt para garantir resultados com estética de marketing de alta conversão."
             },
             "fr": {
                 "nav_enterprise": "Entreprise",
@@ -312,6 +508,7 @@
                 "card_title": "MixBanana par Nano Banana Pro",
                 "card_desc": "Générateur créatif marketing spécialisé. Créez des actifs haute fidélité, multilingues et multi-formats en quelques secondes.",
                 "card_cta": "Lancer l'App",
+                "beta_link_text": "Version Bêta",
                 "dashboard_loading": "Génération des Actifs...",
                 "feat_1_title": "Localisation Globale",
                 "feat_1_desc": "Outils pour l'adaptation linguistique et culturelle instantanée.",
@@ -319,7 +516,23 @@
                 "feat_2_desc": "Modèles vidéo de nouvelle génération pour le commerce social.",
                 "feat_3_title": "Flux Agentiques",
                 "feat_3_desc": "Gestion de campagnes marketing totalement autonome.",
-                "footer_rights": "&copy; 2025 MixBanana. Tous droits réservés."
+                "footer_rights": "&copy; 2025 MixBanana. Tous droits réservés.",
+                "kb_title": "Pourquoi choisir MixBanana ?",
+                "kb_feat_1_title": "Apportez votre clé (BYOK)",
+                "kb_feat_1_desc": "Très haute sécurité. Nous ne stockons pas vos clés. Elles restent sur votre appareil.",
+                "kb_feat_2_title": "Fiabilité OpenRouter",
+                "kb_feat_2_desc": "Grande transparence. Dites adieu aux coûts cachés.",
+                "kb_feat_3_title": "Production Automatique",
+                "kb_feat_3_desc": "Le flux de travail par agents facilite la production de créations en lot.",
+                "faq_title": "Foire Aux Questions",
+                "faq_q1": "De quelle clé API ai-je besoin pour MixBanana ?",
+                "faq_a1": "Vous avez besoin d'une clé API OpenRouter. Nous agissons comme une interface sécurisée pour le modèle Gemini 3 Pro, vous assurant de payer les tarifs les plus bas.",
+                "faq_q2": "Mes données sont-elles sécurisées avec BYOK ?",
+                "faq_a2": "Oui. « Apportez Votre Propre Clé » signifie que nous ne stockons jamais vos identifiants. Votre clé reste sur votre appareil et est envoyée directement à l'API OpenRouter.",
+                "faq_q3": "Puis-je utiliser les images pour des publicités commerciales ?",
+                "faq_a3": "Absolument. Puisque vous utilisez votre propre clé, vous possédez les droits commerciaux des actifs générés, sous réserve des conditions standard d'OpenRouter et de Google.",
+                "faq_q4": "Qu'est-ce que « Nano Banana Pro » ?",
+                "faq_a4": "C'est notre implémentation spécialisée du modèle Gemini 3 Pro Image. Nous avons affiné l'ingénierie des prompts pour garantir des résultats à haute conversion marketing."
             },
             "de": {
                 "nav_enterprise": "Unternehmen",
@@ -335,6 +548,7 @@
                 "card_title": "MixBanana von Nano Banana Pro",
                 "card_desc": "Ein spezialisierter Marketing-Generator. Erstellen Sie in Sekunden High-Fidelity-, mehrsprachige und multiformatige Assets.",
                 "card_cta": "App Starten",
+                "beta_link_text": "Beta-Version",
                 "dashboard_loading": "Generiere Assets...",
                 "feat_1_title": "Globale Lokalisierung",
                 "feat_1_desc": "Tools für sofortige sprachliche und kulturelle Anpassung.",
@@ -342,7 +556,23 @@
                 "feat_2_desc": "Forschung an Next-Gen-Videomodellen für Social Commerce.",
                 "feat_3_title": "Agentische Workflows",
                 "feat_3_desc": "Vollautonomes Marketing-Kampagnenmanagement.",
-                "footer_rights": "&copy; 2025 MixBanana. Alle Rechte vorbehalten."
+                "footer_rights": "&copy; 2025 MixBanana. Alle Rechte vorbehalten.",
+                "kb_title": "Warum MixBanana?",
+                "kb_feat_1_title": "Eigener Schlüssel (BYOK)",
+                "kb_feat_1_desc": "Sehr hohe Sicherheit. Wir speichern Ihre Schlüssel nicht. Sie bleiben auf Ihrem Gerät.",
+                "kb_feat_2_title": "OpenRouter Zuverlässigkeit",
+                "kb_feat_2_desc": "Hohe Transparenz. Verabschieden Sie sich von versteckten Kosten.",
+                "kb_feat_3_title": "Automatische Produktion",
+                "kb_feat_3_desc": "Agenten-Workflow erleichtert die Serienproduktion von Creatives.",
+                "faq_title": "Häufig Gestellte Fragen",
+                "faq_q1": "Welchen API-Schlüssel benötige ich?",
+                "faq_a1": "Sie benötigen einen OpenRouter API-Schlüssel. Wir fungieren als sichere Schnittstelle für das Gemini 3 Pro Modell, damit Sie die niedrigsten Raten zahlen.",
+                "faq_q2": "Sind meine Daten mit BYOK sicher?",
+                "faq_a2": "Ja. „Bring Your Own Key“ bedeutet, dass wir Ihre Anmeldeinformationen niemals speichern. Ihr Schlüssel bleibt auf Ihrem Gerät.",
+                "faq_q3": "Kann ich die Bilder kommerziell nutzen?",
+                "faq_a3": "Absolut. Da Sie Ihren eigenen Schlüssel verwenden, besitzen Sie die kommerziellen Rechte an den generierten Assets, vorbehaltlich der Standardbedingungen.",
+                "faq_q4": "Was ist „Nano Banana Pro“?",
+                "faq_a4": "Es ist unsere spezialisierte Implementierung des Gemini 3 Pro Image Modells, optimiert für Marketing-Ästhetik mit hoher Konversionsrate."
             },
             "it": {
                 "nav_enterprise": "Impresa",
@@ -358,6 +588,7 @@
                 "card_title": "MixBanana di Nano Banana Pro",
                 "card_desc": "Un generatore creativo di marketing specializzato. Crea asset ad alta fedeltà, multilingua e multiformato in pochi secondi.",
                 "card_cta": "Avvia App",
+                "beta_link_text": "Versione Beta",
                 "dashboard_loading": "Generazione Asset...",
                 "feat_1_title": "Localizzazione Globale",
                 "feat_1_desc": "Strumenti per l'adattamento linguistico e culturale istantaneo.",
@@ -365,7 +596,23 @@
                 "feat_2_desc": "Modelli video di nuova generazione per il social commerce.",
                 "feat_3_title": "Flussi Agenti",
                 "feat_3_desc": "Gestione campagne marketing completamente autonoma.",
-                "footer_rights": "&copy; 2025 MixBanana. Tutti i diritti riservati."
+                "footer_rights": "&copy; 2025 MixBanana. Tutti i diritti riservati.",
+                "kb_title": "Perché MixBanana?",
+                "kb_feat_1_title": "Usa la tua chiave (BYOK)",
+                "kb_feat_1_desc": "Altissima sicurezza. Non memorizziamo le tue chiavi. Rimangono sul tuo dispositivo.",
+                "kb_feat_2_title": "Affidabilità OpenRouter",
+                "kb_feat_2_desc": "Alta trasparenza. Di' addio ai costi nascosti.",
+                "kb_feat_3_title": "Produzione Automatica",
+                "kb_feat_3_desc": "Il flusso di lavoro degli agenti facilita la produzione in serie di creatività.",
+                "faq_title": "Domande Frequenti",
+                "faq_q1": "Quale chiave API mi serve?",
+                "faq_a1": "Hai bisogno di una chiave API OpenRouter. Agiamo come interfaccia sicura per il modello Gemini 3 Pro, garantendoti le tariffe più basse.",
+                "faq_q2": "I miei dati sono sicuri con BYOK?",
+                "faq_a2": "Sì. 'Usa la tua chiave' significa che non memorizziamo mai le tue credenziali. La tua chiave rimane sul tuo dispositivo.",
+                "faq_q3": "Posso usare le immagini per annunci commerciali?",
+                "faq_a3": "Assolutamente. Poiché usi la tua chiave, possiedi i diritti commerciali delle risorse generate, soggetti ai termini standard.",
+                "faq_q4": "Cos'è 'Nano Banana Pro'?",
+                "faq_a4": "È la nostra implementazione specializzata del modello Gemini 3 Pro Image, ottimizzata per un'estetica di marketing ad alta conversione."
             },
             "pl": {
                 "nav_enterprise": "Przedsiębiorstwo",
@@ -381,6 +628,7 @@
                 "card_title": "MixBanana od Nano Banana Pro",
                 "card_desc": "Specjalistyczny generator kreatywny dla marketingu. Twórz wysokiej jakości zasoby w wielu językach i formatach w kilka sekund.",
                 "card_cta": "Uruchom Aplikację",
+                "beta_link_text": "Wersja Beta",
                 "dashboard_loading": "Generowanie Zasobów...",
                 "feat_1_title": "Globalna Lokalizacja",
                 "feat_1_desc": "Narzędzia do natychmiastowej adaptacji językowej i kulturowej.",
@@ -388,7 +636,23 @@
                 "feat_2_desc": "Badania nad modelami wideo nowej generacji dla social commerce.",
                 "feat_3_title": "Przepływy Agenckie",
                 "feat_3_desc": "W pełni autonomiczne zarządzanie kampaniami marketingowymi.",
-                "footer_rights": "&copy; 2025 MixBanana. Wszelkie prawa zastrzeżone."
+                "footer_rights": "&copy; 2025 MixBanana. Wszelkie prawa zastrzeżone.",
+                "kb_title": "Dlaczego MixBanana?",
+                "kb_feat_1_title": "Własny Klucz (BYOK)",
+                "kb_feat_1_desc": "Bardzo wysokie bezpieczeństwo. Nie przechowujemy Twoich kluczy. Pozostają na Twoim urządzeniu.",
+                "kb_feat_2_title": "Niezawodność OpenRouter",
+                "kb_feat_2_desc": "Wysoka przejrzystość. Pożegnaj ukryte koszty.",
+                "kb_feat_3_title": "Automatyczna Produkcja",
+                "kb_feat_3_desc": "Przepływ pracy agentów ułatwia seryjną produkcję kreacji.",
+                "faq_title": "Często Zadawane Pytania",
+                "faq_q1": "Jakiego klucza API potrzebuję?",
+                "faq_a1": "Potrzebujesz klucza API OpenRouter. Działamy jako bezpieczny interfejs dla modelu Gemini 3 Pro, zapewniając najniższe stawki.",
+                "faq_q2": "Czy moje dane są bezpieczne z BYOK?",
+                "faq_a2": "Tak. „Własny Klucz” oznacza, że nigdy nie przechowujemy Twoich danych uwierzytelniających. Twój klucz pozostaje na Twoim urządzeniu.",
+                "faq_q3": "Czy mogę używać obrazów w reklamach?",
+                "faq_a3": "Oczywiście. Ponieważ używasz własnego klucza, posiadasz prawa komercyjne do wygenerowanych zasobów, zgodnie ze standardowymi warunkami.",
+                "faq_q4": "Czym jest „Nano Banana Pro”?",
+                "faq_a4": "To nasza specjalistyczna implementacja modelu Gemini 3 Pro Image, zoptymalizowana pod kątem estetyki marketingowej o wysokiej konwersji."
             },
             "ar": {
                 "nav_enterprise": "مؤسسة",
@@ -404,6 +668,7 @@
                 "card_title": "MixBanana بواسطة Nano Banana Pro",
                 "card_desc": "مولد إبداعي تسويقي متخصص. أنشئ أصولاً عالية الدقة ومتعددة اللغات والأبعاد في ثوانٍ.",
                 "card_cta": "تشغيل التطبيق",
+                "beta_link_text": "النسخة التجريبية",
                 "dashboard_loading": "جاري إنشاء الأصول...",
                 "feat_1_title": "التعريب العالمي",
                 "feat_1_desc": "أدوات للتكيف اللغوي والثقافي الفوري.",
@@ -411,7 +676,23 @@
                 "feat_2_desc": "بحث في نماذج الفيديو من الجيل القادم للتجارة الاجتماعية.",
                 "feat_3_title": "سير عمل الوكيل",
                 "feat_3_desc": "إدارة حملات تسويقية ذاتية بالكامل.",
-                "footer_rights": "&copy; 2025 MixBanana. جميع الحقوق محفوظة."
+                "footer_rights": "&copy; 2025 MixBanana. جميع الحقوق محفوظة.",
+                "kb_title": "لماذا تختار MixBanana؟",
+                "kb_feat_1_title": "أحضر مفتاحك الخاص (BYOK)",
+                "kb_feat_1_desc": "أمان عالي جدًا. نحن لا نقوم بتخزين مفاتيحك. تظل على جهازك.",
+                "kb_feat_2_title": "موثوقية OpenRouter",
+                "kb_feat_2_desc": "شفافية عالية. قل وداعًا للتكاليف الخفية.",
+                "kb_feat_3_title": "الإنتاج التلقائي",
+                "kb_feat_3_desc": "سير عمل الوكيل يسهل إنتاج الإبداعات على دفعات.",
+                "faq_title": "الأسئلة الشائعة",
+                "faq_q1": "ما هو مفتاح API الذي أحتاجه لاستخدام MixBanana؟",
+                "faq_a1": "أنت بحاجة إلى مفتاح OpenRouter API. نحن نعمل كواجهة آمنة لنموذج Gemini 3 Pro. هذا يضمن أنك تدفع أقل الأسعار المباشرة.",
+                "faq_q2": "هل بياناتي آمنة مع BYOK؟",
+                "faq_a2": "نعم. 'أحضر مفتاحك الخاص' يعني أننا لا نقوم أبدًا بتخزين بيانات الاعتماد الخاصة بك على خوادمنا. يظل مفتاحك على جهازك محليًا.",
+                "faq_q3": "هل يمكنني استخدام الصور للإعلانات التجارية؟",
+                "faq_a3": "بالتأكيد. نظرًا لأنك تستخدم مفتاحك الخاص، فأنت تمتلك الحقوق التجارية للأصول التي تنشئها، وفقًا للشروط القياسية.",
+                "faq_q4": "ما هو \"Nano Banana Pro\"؟",
+                "faq_a4": "إنه تطبيقنا المتخصص لنموذج Gemini 3 Pro Image. لقد قمنا بضبط طبقة هندسة الأوامر لضمان مخرجات تلتزم بجماليات التسويق عالية التحويل."
             },
             "id": {
                 "nav_enterprise": "Perusahaan",
@@ -427,6 +708,7 @@
                 "card_title": "MixBanana oleh Nano Banana Pro",
                 "card_desc": "Generator kreatif pemasaran khusus. Buat aset berkualitas tinggi, multi-bahasa, dan multi-rasio dalam hitungan detik.",
                 "card_cta": "Buka Aplikasi",
+                "beta_link_text": "Versi Beta",
                 "dashboard_loading": "Membuat Aset Kreatif...",
                 "feat_1_title": "Lokalisasi Global",
                 "feat_1_desc": "Alat untuk adaptasi bahasa dan budaya instan.",
@@ -434,7 +716,23 @@
                 "feat_2_desc": "Meneliti model video generasi berikutnya untuk social commerce.",
                 "feat_3_title": "Alur Kerja Agen",
                 "feat_3_desc": "Manajemen kampanye pemasaran yang sepenuhnya otonom.",
-                "footer_rights": "&copy; 2025 MixBanana. Hak cipta dilindungi undang-undang."
+                "footer_rights": "&copy; 2025 MixBanana. Hak cipta dilindungi undang-undang.",
+                "kb_title": "Mengapa Memilih MixBanana?",
+                "kb_feat_1_title": "Bawa Kunci Sendiri (BYOK)",
+                "kb_feat_1_desc": "Keamanan sangat tinggi. Kami tidak menyimpan kunci Anda. Kunci tetap ada di perangkat Anda.",
+                "kb_feat_2_title": "Keandalan OpenRouter",
+                "kb_feat_2_desc": "Transparansi tinggi. Ucapkan selamat tinggal pada biaya tersembunyi.",
+                "kb_feat_3_title": "Produksi Otomatis",
+                "kb_feat_3_desc": "Alur Kerja Agen memudahkan produksi materi iklan secara batch.",
+                "faq_title": "Pertanyaan Umum",
+                "faq_q1": "Kunci API apa yang saya perlukan?",
+                "faq_a1": "Anda memerlukan Kunci API OpenRouter. Kami bertindak sebagai antarmuka aman untuk model Gemini 3 Pro, memastikan tarif terendah.",
+                "faq_q2": "Apakah data saya aman dengan BYOK?",
+                "faq_a2": "Ya. 'Bawa Kunci Sendiri' berarti kami tidak pernah menyimpan kredensial Anda. Kunci Anda tetap ada di perangkat Anda.",
+                "faq_q3": "Bisakah saya menggunakan gambar untuk iklan komersial?",
+                "faq_a3": "Tentu saja. Karena Anda menggunakan kunci sendiri, Anda memiliki hak komersial atas aset yang dihasilkan, tunduk pada ketentuan standar.",
+                "faq_q4": "Apa itu \"Nano Banana Pro\"?",
+                "faq_a4": "Ini adalah implementasi khusus kami dari model Gemini 3 Pro Image, dioptimalkan untuk estetika pemasaran konversi tinggi."
             },
             "ms": {
                 "nav_enterprise": "Perusahaan",
@@ -450,6 +748,7 @@
                 "card_title": "MixBanana oleh Nano Banana Pro",
                 "card_desc": "Penjana kreatif pemasaran khusus. Cipta aset berkualiti tinggi, pelbagai bahasa dan nisbah dalam beberapa saat.",
                 "card_cta": "Lancar Aplikasi",
+                "beta_link_text": "Versi Beta",
                 "dashboard_loading": "Menjana Aset Kreatif...",
                 "feat_1_title": "Lokalisasi Global",
                 "feat_1_desc": "Alat untuk adaptasi bahasa dan budaya segera.",
@@ -457,7 +756,23 @@
                 "feat_2_desc": "Menyelidik model video generasi seterusnya untuk perdagangan sosial.",
                 "feat_3_title": "Aliran Kerja Ejen",
                 "feat_3_desc": "Pengurusan kempen pemasaran autonomi sepenuhnya.",
-                "footer_rights": "&copy; 2025 MixBanana. Hak cipta terpelihara."
+                "footer_rights": "&copy; 2025 MixBanana. Hak cipta terpelihara.",
+                "kb_title": "Kenapa Pilih MixBanana?",
+                "kb_feat_1_title": "Bawa Kunci Sendiri (BYOK)",
+                "kb_feat_1_desc": "Keselamatan sangat tinggi. Kami tidak menyimpan kunci anda. Kunci kekal pada peranti anda.",
+                "kb_feat_2_title": "Kebolehpercayaan OpenRouter",
+                "kb_feat_2_desc": "Ketelusan tinggi. Katakan selamat tinggal kepada kos tersembunyi.",
+                "kb_feat_3_title": "Pengeluaran Automatik",
+                "kb_feat_3_desc": "Aliran Kerja Ejen memudahkan penghasilan kreatif secara pukal.",
+                "faq_title": "Soalan Lazim",
+                "faq_q1": "Apakah Kunci API yang saya perlukan?",
+                "faq_a1": "Anda memerlukan Kunci API OpenRouter. Kami bertindak sebagai antara muka selamat untuk model Gemini 3 Pro, memastikan kadar terendah.",
+                "faq_q2": "Adakah data saya selamat dengan BYOK?",
+                "faq_a2": "Ya. 'Bawa Kunci Sendiri' bermaksud kami tidak pernah menyimpan kelayakan anda. Kunci anda kekal pada peranti anda.",
+                "faq_q3": "Bolehkah saya menggunakan imej untuk iklan komersial?",
+                "faq_a3": "Sudah tentu. Oleh kerana anda menggunakan kunci sendiri, anda memiliki hak komersial ke atas aset yang dihasilkan.",
+                "faq_q4": "Apa itu \"Nano Banana Pro\"?",
+                "faq_a4": "Ia adalah pelaksanaan khusus kami bagi model Gemini 3 Pro Image, dioptimumkan untuk estetika pemasaran penukaran tinggi."
             },
             "th": {
                 "nav_enterprise": "องค์กร",
@@ -473,6 +788,7 @@
                 "card_title": "MixBanana โดย Nano Banana Pro",
                 "card_desc": "เครื่องสร้างสรรค์การตลาดเฉพาะทาง สร้างสินทรัพย์ความละเอียดสูง หลากภาษา และหลายสัดส่วนในไม่กี่วินาที",
                 "card_cta": "เปิดแอป",
+                "beta_link_text": "เวอร์ชันเบต้า",
                 "dashboard_loading": "กำลังสร้างสินทรัพย์...",
                 "feat_1_title": "การปรับให้เข้ากับท้องถิ่น",
                 "feat_1_desc": "เครื่องมือสำหรับการปรับภาษาและวัฒนธรรมทันที",
@@ -480,7 +796,23 @@
                 "feat_2_desc": "วิจัยโมเดลวิดีโอยุคถัดไปสำหรับการค้าผ่านโซเชียล",
                 "feat_3_title": "เวิร์กโฟลว์ตัวแทน",
                 "feat_3_desc": "การจัดการแคมเปญการตลาดแบบอัตโนมัติเต็มรูปแบบ",
-                "footer_rights": "&copy; 2025 MixBanana. สงวนลิขสิทธิ์."
+                "footer_rights": "&copy; 2025 MixBanana. สงวนลิขสิทธิ์.",
+                "kb_title": "ทำไมต้องเลือก MixBanana?",
+                "kb_feat_1_title": "นำคีย์ของคุณมาเอง (BYOK)",
+                "kb_feat_1_desc": "ความปลอดภัยสูงมาก เราไม่เก็บคีย์ของคุณ คีย์จะอยู่บนอุปกรณ์ของคุณ",
+                "kb_feat_2_title": "ความน่าเชื่อถือของ OpenRouter",
+                "kb_feat_2_desc": "ความโปร่งใสสูง บอกลาค่าใช้จ่ายแอบแฝง",
+                "kb_feat_3_title": "การผลิตอัตโนมัติ",
+                "kb_feat_3_desc": "เวิร์กโฟลว์ตัวแทนช่วยให้การผลิตผลงานสร้างสรรค์เป็นชุดทำได้ง่าย",
+                "faq_title": "คำถามที่พบบ่อย",
+                "faq_q1": "ฉันต้องใช้คีย์ API อะไร?",
+                "faq_a1": "คุณต้องใช้คีย์ API ของ OpenRouter เราทำหน้าที่เป็นอินเทอร์เฟซที่ปลอดภัยสำหรับโมเดล Gemini 3 Pro เพื่อให้มั่นใจว่าคุณได้ราคาต่ำที่สุด",
+                "faq_q2": "ข้อมูลของฉันปลอดภัยด้วย BYOK หรือไม่?",
+                "faq_a2": "ใช่ 'นำคีย์ของคุณมาเอง' หมายความว่าเราจะไม่เก็บข้อมูลประจำตัวของคุณ คีย์ของคุณจะอยู่บนอุปกรณ์ของคุณ",
+                "faq_q3": "ฉันสามารถใช้รูปภาพสำหรับโฆษณาเชิงพาณิชย์ได้หรือไม่?",
+                "faq_a3": "แน่นอน เนื่องจากคุณใช้คีย์ของคุณเอง คุณจึงเป็นเจ้าของสิทธิ์ทางการค้าในสินทรัพย์ที่คุณสร้างขึ้น",
+                "faq_q4": "\"Nano Banana Pro\" คืออะไร?",
+                "faq_a4": "มันคือการใช้งานเฉพาะของเราสำหรับโมเดล Gemini 3 Pro Image ที่ปรับให้เหมาะสมเพื่อความสวยงามทางการตลาดที่มีการแปลงสูง"
             },
             "vi": {
                 "nav_enterprise": "Doanh nghiệp",
@@ -496,6 +828,7 @@
                 "card_title": "MixBanana bởi Nano Banana Pro",
                 "card_desc": "Trình tạo sáng tạo tiếp thị chuyên dụng. Tạo tài sản độ trung thực cao, đa ngôn ngữ và đa tỷ lệ trong vài giây.",
                 "card_cta": "Mở Ứng dụng",
+                "beta_link_text": "Phiên bản Beta",
                 "dashboard_loading": "Đang tạo tài sản...",
                 "feat_1_title": "Bản địa hóa Toàn cầu",
                 "feat_1_desc": "Công cụ thích ứng ngôn ngữ và văn hóa tức thì.",
@@ -503,7 +836,23 @@
                 "feat_2_desc": "Nghiên cứu mô hình video thế hệ mới cho thương mại xã hội.",
                 "feat_3_title": "Quy trình Tác nhân",
                 "feat_3_desc": "Quản lý chiến dịch tiếp thị hoàn toàn tự động.",
-                "footer_rights": "&copy; 2025 MixBanana. Bảo lưu mọi quyền."
+                "footer_rights": "&copy; 2025 MixBanana. Bảo lưu mọi quyền.",
+                "kb_title": "Tại sao chọn MixBanana?",
+                "kb_feat_1_title": "Dùng khóa của riêng bạn (BYOK)",
+                "kb_feat_1_desc": "Bảo mật cực cao. Chúng tôi không lưu khóa của bạn. Khóa vẫn nằm trên thiết bị của bạn.",
+                "kb_feat_2_title": "Độ tin cậy OpenRouter",
+                "kb_feat_2_desc": "Minh bạch cao. Nói lời tạm biệt với các chi phí ẩn.",
+                "kb_feat_3_title": "Sản xuất Tự động",
+                "kb_feat_3_desc": "Quy trình làm việc của Tác nhân giúp dễ dàng sản xuất hàng loạt các sản phẩm sáng tạo.",
+                "faq_title": "Câu hỏi thường gặp",
+                "faq_q1": "Tôi cần khóa API nào để sử dụng MixBanana?",
+                "faq_a1": "Bạn cần có Khóa API OpenRouter. Chúng tôi hoạt động như một giao diện an toàn cho mô hình Gemini 3 Pro. Điều này đảm bảo bạn trả mức giá thấp nhất.",
+                "faq_q2": "Dữ liệu của tôi có an toàn với BYOK không?",
+                "faq_a2": "Có. \"Dùng khóa của riêng bạn\" nghĩa là chúng tôi không bao giờ lưu trữ thông tin đăng nhập của bạn. Khóa của bạn vẫn nằm trên thiết bị của bạn.",
+                "faq_q3": "Tôi có thể sử dụng hình ảnh cho quảng cáo thương mại không?",
+                "faq_a3": "Chắc chắn rồi. Vì bạn đang sử dụng khóa của riêng mình, bạn sở hữu quyền thương mại đối với các tài sản bạn tạo ra, tuân theo các điều khoản tiêu chuẩn.",
+                "faq_q4": "\"Nano Banana Pro\" là gì?",
+                "faq_a4": "Đó là triển khai chuyên biệt của chúng tôi đối với mô hình Gemini 3 Pro Image. Chúng tôi đã tinh chỉnh lớp kỹ thuật nhắc lệnh để đảm bảo đầu ra tuân thủ thẩm mỹ tiếp thị chuyển đổi cao."
             }
         };
 
