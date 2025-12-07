@@ -75,11 +75,11 @@
         </div>
         
         <div class="flex items-center gap-4 md:gap-6">
-            <div class="hidden md:flex gap-6 text-sm text-gray-400">
-                <span data-i18n="nav_enterprise">Enterprise</span>
-                <span data-i18n="nav_solutions">Solutions</span>
-                <span data-i18n="nav_research">Research</span>
-            </div>
+            <!-- Replaced Text Links with Scroll Button -->
+            <a href="#modes" class="hidden md:flex items-center gap-2 text-sm font-medium text-banana-yellow border border-banana-yellow/30 bg-banana-yellow/10 px-4 py-2 rounded-full hover:bg-banana-yellow hover:text-black transition-all duration-300">
+                <span data-i18n="nav_explore">Explore Modes</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+            </a>
             
             <!-- Language Switcher -->
             <div class="relative">
@@ -175,22 +175,27 @@
             </div>
         </div>
 
-        <!-- Future Roadmap Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 w-full max-w-4xl text-center md:text-left rtl:md:text-right">
-            <div class="p-4 border border-white/5 rounded-lg bg-white/[0.02]">
-                <div class="text-banana-yellow mb-2 text-lg">✦</div>
-                <h3 class="font-semibold mb-1" data-i18n="feat_1_title">Global Localization</h3>
-                <p class="text-xs text-gray-500" data-i18n="feat_1_desc">Upcoming tools for instant language and cultural adaptation.</p>
+        <!-- Flagship Modes Grid (Updated) -->
+        <div id="modes" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 w-full max-w-5xl text-center md:text-left rtl:md:text-right scroll-mt-24">
+            <!-- Mode 1: Creation -->
+            <div class="p-6 border border-white/5 rounded-xl bg-white/[0.02] hover:border-banana-yellow/30 transition-colors duration-300">
+                <div class="text-banana-yellow mb-3 text-2xl">✨</div>
+                <h3 class="text-lg font-semibold mb-2" data-i18n="mode_1_title">Creation</h3>
+                <p class="text-sm text-gray-400 leading-relaxed" data-i18n="mode_1_desc">Wanna make something? Drop all your ideas and we will make your creative shine. You can even send references from your competitors.</p>
             </div>
-            <div class="p-4 border border-white/5 rounded-lg bg-white/[0.02]">
-                <div class="text-banana-yellow mb-2 text-lg">✦</div>
-                <h3 class="font-semibold mb-1" data-i18n="feat_2_title">Video Synthesis</h3>
-                <p class="text-xs text-gray-500" data-i18n="feat_2_desc">Researching next-gen video models for social commerce.</p>
+            
+            <!-- Mode 2: Variation -->
+            <div class="p-6 border border-white/5 rounded-xl bg-white/[0.02] hover:border-banana-yellow/30 transition-colors duration-300">
+                <div class="text-banana-yellow mb-3 text-2xl">⚡</div>
+                <h3 class="text-lg font-semibold mb-2" data-i18n="mode_2_title">Variation</h3>
+                <p class="text-sm text-gray-400 leading-relaxed" data-i18n="mode_2_desc">Have a good performing creative? With variation mode, we can make more creatives like that automatically.</p>
             </div>
-            <div class="p-4 border border-white/5 rounded-lg bg-white/[0.02]">
-                <div class="text-banana-yellow mb-2 text-lg">✦</div>
-                <h3 class="font-semibold mb-1" data-i18n="feat_3_title">Agentic Workflows</h3>
-                <p class="text-xs text-gray-500" data-i18n="feat_3_desc">Fully autonomous marketing campaign management.</p>
+            
+            <!-- Mode 3: Expansion -->
+            <div class="p-6 border border-white/5 rounded-xl bg-white/[0.02] hover:border-banana-yellow/30 transition-colors duration-300">
+                <div class="text-banana-yellow mb-3 text-2xl">🌍</div>
+                <h3 class="text-lg font-semibold mb-2" data-i18n="mode_3_title">Expansion</h3>
+                <p class="text-sm text-gray-400 leading-relaxed" data-i18n="mode_3_desc">Want to bring your good performing creative to more markets or media sources? Simply expand it instantly.</p>
             </div>
         </div>
 
@@ -322,9 +327,7 @@
     <script>
         const translations = {
             "en": {
-                "nav_enterprise": "Enterprise",
-                "nav_solutions": "Solutions",
-                "nav_research": "Research",
+                "nav_explore": "Explore Modes",
                 "hero_badge": "The Future of Marketing",
                 "hero_title_prefix": "Next-Gen",
                 "hero_title_highlight": "AI Solutions",
@@ -337,12 +340,15 @@
                 "card_cta": "Launch App",
                 "beta_link_text": "Beta Version",
                 "dashboard_loading": "Generating Creative Assets...",
-                "feat_1_title": "Global Localization",
-                "feat_1_desc": "Upcoming tools for instant language and cultural adaptation.",
-                "feat_2_title": "Video Synthesis",
-                "feat_2_desc": "Researching next-gen video models for social commerce.",
-                "feat_3_title": "Agentic Workflows",
-                "feat_3_desc": "Fully autonomous marketing campaign management.",
+                
+                // Updated Modes
+                "mode_1_title": "Creation",
+                "mode_1_desc": "Wanna make something? Drop all your ideas and we will make your creative shine. You can even send references from your competitors.",
+                "mode_2_title": "Variation",
+                "mode_2_desc": "Have a good performing creative? With variation mode, we can make more creatives like that automatically.",
+                "mode_3_title": "Expansion",
+                "mode_3_desc": "Want to bring your good performing creative to more markets or media sources? Simply expand it instantly.",
+
                 "footer_rights": "&copy; 2025 MixBanana. All rights reserved.",
                 "kb_title": "Why Choose MixBanana?",
                 "kb_feat_1_title": "Bring Your Own Key",
@@ -364,9 +370,7 @@
                 "faq_a5": "Not directly. However, you can add your Google Gemini Key to your OpenRouter account settings to generate a compatible OpenRouter key. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Learn how to set up BYOK here</a>."
             },
             "zh-CN": {
-                "nav_enterprise": "企业版",
-                "nav_solutions": "解决方案",
-                "nav_research": "研究",
+                "nav_explore": "探索模式",
                 "hero_badge": "营销的未来",
                 "hero_title_prefix": "面向全球品牌的",
                 "hero_title_highlight": "下一代 AI 解决方案",
@@ -379,12 +383,14 @@
                 "card_cta": "启动应用",
                 "beta_link_text": "访问测试版",
                 "dashboard_loading": "正在生成创意资产...",
-                "feat_1_title": "全球本地化",
-                "feat_1_desc": "即将推出的即时语言和文化适应工具。",
-                "feat_2_title": "视频合成",
-                "feat_2_desc": "研究面向社交电商的下一代视频模型。",
-                "feat_3_title": "智能体工作流",
-                "feat_3_desc": "全自动营销活动管理。",
+                
+                "mode_1_title": "创作模式",
+                "mode_1_desc": "想创作什么？提供您的想法，我们将让您的创意闪耀。您甚至可以发送竞争对手的参考资料。",
+                "mode_2_title": "变体模式",
+                "mode_2_desc": "有表现良好的创意？使用变体模式，我们可以自动生成更多类似的创意。",
+                "mode_3_title": "扩展模式",
+                "mode_3_desc": "想将表现良好的创意推广到更多市场或媒体渠道？简单地即时扩展它。",
+
                 "footer_rights": "&copy; 2025 MixBanana. 保留所有权利。",
                 "kb_title": "为什么选择 MixBanana？",
                 "kb_feat_1_title": "自带密钥 (BYOK)",
@@ -403,12 +409,10 @@
                 "faq_q4": "什么是“Nano Banana Pro”？",
                 "faq_a4": "它是我们对 Gemini 3 Pro Image Preview 模型的专业化实现。我们微调了提示工程层，以确保输出特别符合高转化率的营销美学。",
                 "faq_q5": "我可以直接使用 Google Gemini API 密钥吗？",
-                "faq_a5": "不能直接使用。但是，您可以将 Google Gemini 密钥添加到 OpenRouter 账户设置中，生成兼容的 OpenRouter 密钥。这样您就可以在 MixBanana 上使用您的 Google 配额。"
+                "faq_a5": "不能直接使用。但是，您可以将 Google Gemini 密钥添加到 OpenRouter 账户设置中，生成兼容的 OpenRouter 密钥。<a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>在此了解如何设置 BYOK</a>。"
             },
             "zh-TW": {
-                "nav_enterprise": "企業版",
-                "nav_solutions": "解決方案",
-                "nav_research": "研究",
+                "nav_explore": "探索模式",
                 "hero_badge": "行銷的未來",
                 "hero_title_prefix": "面向全球品牌的",
                 "hero_title_highlight": "下一代 AI 解決方案",
@@ -421,12 +425,14 @@
                 "card_cta": "啟動應用",
                 "beta_link_text": "訪問測試版",
                 "dashboard_loading": "正在生成創意資產...",
-                "feat_1_title": "全球在地化",
-                "feat_1_desc": "即將推出的即時語言和文化適應工具。",
-                "feat_2_title": "影片合成",
-                "feat_2_desc": "研究面向社群電商的下一代影片模型。",
-                "feat_3_title": "智能體工作流",
-                "feat_3_desc": "全自動行銷活動管理。",
+                
+                "mode_1_title": "創作模式",
+                "mode_1_desc": "想創作什麼？提供您的想法，我們將讓您的創意閃耀。您甚至可以發送競爭對手的參考資料。",
+                "mode_2_title": "變體模式",
+                "mode_2_desc": "有表現良好的創意？使用變體模式，我們可以自動生成更多類似的創意。",
+                "mode_3_title": "擴展模式",
+                "mode_3_desc": "想將表現良好的創意推廣到更多市場或媒體渠道？簡單地即時擴展它。",
+
                 "footer_rights": "&copy; 2025 MixBanana. 保留所有權利。",
                 "kb_title": "為什麼選擇 MixBanana？",
                 "kb_feat_1_title": "自帶密鑰 (BYOK)",
@@ -445,12 +451,10 @@
                 "faq_q4": "什麼是「Nano Banana Pro」？",
                 "faq_a4": "它是我們對 Gemini 3 Pro Image Preview 模型的專業化實現。我們微調了提示工程層，以確保輸出特別符合高轉化率的行銷美學。",
                 "faq_q5": "我可以直接使用 Google Gemini API 密鑰嗎？",
-                "faq_a5": "不能直接使用。但是，您可以將 Google Gemini 金鑰添加到 OpenRouter 帳戶設置中，生成相容的 OpenRouter 金鑰。這樣您就可以在 MixBanana 上使用您的 Google 配額。"
+                "faq_a5": "不能直接使用。但是，您可以將 Google Gemini 金鑰添加到 OpenRouter 帳戶設置中，生成相容的 OpenRouter 金鑰。<a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>在此了解如何設置 BYOK</a>。"
             },
             "es": {
-                "nav_enterprise": "Empresa",
-                "nav_solutions": "Soluciones",
-                "nav_research": "Investigación",
+                "nav_explore": "Explorar Modos",
                 "hero_badge": "El Futuro del Marketing",
                 "hero_title_prefix": "Soluciones de IA de",
                 "hero_title_highlight": "Próxima Generación",
@@ -463,12 +467,14 @@
                 "card_cta": "Iniciar App",
                 "beta_link_text": "Versión Beta",
                 "dashboard_loading": "Generando Activos Creativos...",
-                "feat_1_title": "Localización Global",
-                "feat_1_desc": "Herramientas para adaptación cultural e idiomática instantánea.",
-                "feat_2_title": "Síntesis de Video",
-                "feat_2_desc": "Modelos de video de próxima generación para comercio social.",
-                "feat_3_title": "Flujos de Agentes",
-                "feat_3_desc": "Gestión de campañas de marketing totalmente autónoma.",
+                
+                "mode_1_title": "Creación",
+                "mode_1_desc": "¿Quieres crear algo? Danos tus ideas y haremos que tu creatividad brille. Incluso puedes enviar referencias de tus competidores.",
+                "mode_2_title": "Variación",
+                "mode_2_desc": "¿Tienes un creativo que funciona bien? Con el modo variación, podemos hacer más creativos como ese automáticamente.",
+                "mode_3_title": "Expansión",
+                "mode_3_desc": "¿Quieres llevar tu creativo exitoso a más mercados o medios? Simplemente expándelo al instante.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Todos los derechos reservados.",
                 "kb_title": "¿Por qué elegir MixBanana?",
                 "kb_feat_1_title": "Trae tu propia clave (BYOK)",
@@ -487,9 +493,10 @@
                 "faq_q4": "¿Qué es 'Nano Banana Pro'?",
                 "faq_a4": "Es nuestra implementación especializada del modelo Gemini 3 Pro Image. Hemos ajustado la ingeniería de prompts para asegurar resultados con estética de marketing de alta conversión.",
                 "faq_q5": "¿Puedo usar mi clave API de Google Gemini directamente?",
-                "faq_a5": "No directamente. Sin embargo, puedes añadir tu clave de Google Gemini a la configuración de tu cuenta de OpenRouter para generar una clave compatible. Esto te permite usar tus límites de Google en MixBanana."
+                "faq_a5": "No directamente. Sin embargo, puedes añadir tu clave de Google Gemini a la configuración de tu cuenta de OpenRouter para generar una clave compatible. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Aprende a configurar BYOK aquí</a>."
             },
             "pt": {
+                "nav_explore": "Explorar Modos",
                 "nav_enterprise": "Empresarial",
                 "nav_solutions": "Soluções",
                 "nav_research": "Pesquisa",
@@ -505,12 +512,14 @@
                 "card_cta": "Iniciar App",
                 "beta_link_text": "Versão Beta",
                 "dashboard_loading": "Gerando Ativos Criativos...",
-                "feat_1_title": "Localização Global",
-                "feat_1_desc": "Ferramentas para adaptação cultural e linguística instantânea.",
-                "feat_2_title": "Síntese de Vídeo",
-                "feat_2_desc": "Pesquisando modelos de vídeo de próxima geração para social commerce.",
-                "feat_3_title": "Fluxos de Agentes",
-                "feat_3_desc": "Gestão de campanhas de marketing totalmente autônoma.",
+                
+                "mode_1_title": "Criação",
+                "mode_1_desc": "Quer criar algo? Envie suas ideias e faremos sua criatividade brilhar. Você pode até enviar referências de seus concorrentes.",
+                "mode_2_title": "Variação",
+                "mode_2_desc": "Tem um criativo com bom desempenho? Com o modo variação, podemos fazer mais criativos como esse automaticamente.",
+                "mode_3_title": "Expansão",
+                "mode_3_desc": "Quer levar seu criativo de sucesso para mais mercados ou mídias? Simplesmente expanda-o instantaneamente.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Todos os direitos reservados.",
                 "kb_title": "Por que escolher a MixBanana?",
                 "kb_feat_1_title": "Traga sua própria chave (BYOK)",
@@ -529,12 +538,10 @@
                 "faq_q4": "O que é 'Nano Banana Pro'?",
                 "faq_a4": "É nossa implementação especializada do modelo Gemini 3 Pro Image. Ajustamos a engenharia de prompt para garantir resultados com estética de marketing de alta conversão.",
                 "faq_q5": "Posso usar minha chave API do Google Gemini diretamente?",
-                "faq_a5": "Não diretamente. No entanto, você pode adicionar sua chave do Google Gemini às configurações da sua conta OpenRouter para gerar uma chave compatível. Isso permite que você use seus limites do Google no MixBanana."
+                "faq_a5": "Não diretamente. No entanto, você pode adicionar sua chave do Google Gemini às configurações da sua conta OpenRouter para gerar uma chave compatível. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Saiba como configurar BYOK aqui</a>."
             },
             "fr": {
-                "nav_enterprise": "Entreprise",
-                "nav_solutions": "Solutions",
-                "nav_research": "Recherche",
+                "nav_explore": "Explorer les Modes",
                 "hero_badge": "L'Avenir du Marketing",
                 "hero_title_prefix": "Solutions IA de",
                 "hero_title_highlight": "Nouvelle Génération",
@@ -547,12 +554,14 @@
                 "card_cta": "Lancer l'App",
                 "beta_link_text": "Version Bêta",
                 "dashboard_loading": "Génération des Actifs...",
-                "feat_1_title": "Localisation Globale",
-                "feat_1_desc": "Outils pour l'adaptation linguistique et culturelle instantanée.",
-                "feat_2_title": "Synthèse Vidéo",
-                "feat_2_desc": "Modèles vidéo de nouvelle génération pour le commerce social.",
-                "feat_3_title": "Flux Agentiques",
-                "feat_3_desc": "Gestion de campagnes marketing totalement autonome.",
+                
+                "mode_1_title": "Création",
+                "mode_1_desc": "Vous voulez créer quelque chose ? Donnez-nous vos idées et nous ferons briller votre créativité. Vous pouvez même envoyer des références de concurrents.",
+                "mode_2_title": "Variation",
+                "mode_2_desc": "Vous avez une créa performante ? Avec le mode variation, nous pouvons créer plus de créas similaires automatiquement.",
+                "mode_3_title": "Expansion",
+                "mode_3_desc": "Vous voulez porter votre créa performante sur plus de marchés ou de médias ? Étendez-la simplement instantanément.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Tous droits réservés.",
                 "kb_title": "Pourquoi choisir MixBanana ?",
                 "kb_feat_1_title": "Apportez votre clé (BYOK)",
@@ -571,12 +580,10 @@
                 "faq_q4": "Qu'est-ce que « Nano Banana Pro » ?",
                 "faq_a4": "C'est notre implémentation spécialisée du modèle Gemini 3 Pro Image. Nous avons affiné l'ingénierie des prompts pour garantir des résultats à haute conversion marketing.",
                 "faq_q5": "Puis-je utiliser ma clé API Google Gemini directement ?",
-                "faq_a5": "Pas directement. Cependant, vous pouvez ajouter votre clé Google Gemini dans les paramètres de votre compte OpenRouter pour générer une clé compatible. Cela vous permet d'utiliser vos quotas Google sur MixBanana."
+                "faq_a5": "Pas directement. Cependant, vous pouvez ajouter votre clé Google Gemini dans les paramètres de votre compte OpenRouter pour générer une clé compatible. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Apprenez à configurer BYOK ici</a>."
             },
             "de": {
-                "nav_enterprise": "Unternehmen",
-                "nav_solutions": "Lösungen",
-                "nav_research": "Forschung",
+                "nav_explore": "Modi erkunden",
                 "hero_badge": "Die Zukunft des Marketings",
                 "hero_title_prefix": "Next-Gen",
                 "hero_title_highlight": "KI-Lösungen",
@@ -589,12 +596,14 @@
                 "card_cta": "App Starten",
                 "beta_link_text": "Beta-Version",
                 "dashboard_loading": "Generiere Assets...",
-                "feat_1_title": "Globale Lokalisierung",
-                "feat_1_desc": "Tools für sofortige sprachliche und kulturelle Anpassung.",
-                "feat_2_title": "Video-Synthese",
-                "feat_2_desc": "Forschung an Next-Gen-Videomodellen für Social Commerce.",
-                "feat_3_title": "Agentische Workflows",
-                "feat_3_desc": "Vollautonomes Marketing-Kampagnenmanagement.",
+                
+                "mode_1_title": "Erstellung",
+                "mode_1_desc": "Möchten Sie etwas erstellen? Geben Sie uns Ihre Ideen und wir lassen Ihre Kreativität strahlen. Sie können sogar Referenzen von Wettbewerbern senden.",
+                "mode_2_title": "Variation",
+                "mode_2_desc": "Haben Sie ein gut funktionierendes Creative? Mit dem Variationsmodus können wir automatisch mehr solcher Creatives erstellen.",
+                "mode_3_title": "Expansion",
+                "mode_3_desc": "Möchten Sie Ihr erfolgreiches Creative auf weitere Märkte oder Medien bringen? Erweitern Sie es einfach sofort.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Alle Rechte vorbehalten.",
                 "kb_title": "Warum MixBanana?",
                 "kb_feat_1_title": "Eigener Schlüssel (BYOK)",
@@ -613,12 +622,10 @@
                 "faq_q4": "Was ist „Nano Banana Pro“?",
                 "faq_a4": "Es ist unsere spezialisierte Implementierung des Gemini 3 Pro Image Modells, optimiert für Marketing-Ästhetik mit hoher Konversionsrate.",
                 "faq_q5": "Kann ich meinen Google Gemini API-Schlüssel direkt verwenden?",
-                "faq_a5": "Nicht direkt. Sie können jedoch Ihren Google Gemini-Schlüssel zu Ihren OpenRouter-Kontoeinstellungen hinzufügen, um einen kompatiblen Schlüssel zu erstellen. So können Sie Ihre Google-Limits in MixBanana nutzen."
+                "faq_a5": "Nicht direkt. Sie können jedoch Ihren Google Gemini-Schlüssel zu Ihren OpenRouter-Kontoeinstellungen hinzufügen, um einen kompatiblen Schlüssel zu erstellen. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Erfahren Sie hier, wie Sie BYOK einrichten</a>."
             },
             "it": {
-                "nav_enterprise": "Impresa",
-                "nav_solutions": "Soluzioni",
-                "nav_research": "Ricerca",
+                "nav_explore": "Esplora Modalità",
                 "hero_badge": "Il Futuro del Marketing",
                 "hero_title_prefix": "Soluzioni AI di",
                 "hero_title_highlight": "Nuova Generazione",
@@ -631,12 +638,14 @@
                 "card_cta": "Avvia App",
                 "beta_link_text": "Versione Beta",
                 "dashboard_loading": "Generazione Asset...",
-                "feat_1_title": "Localizzazione Globale",
-                "feat_1_desc": "Strumenti per l'adattamento linguistico e culturale istantaneo.",
-                "feat_2_title": "Sintesi Video",
-                "feat_2_desc": "Modelli video di nuova generazione per il social commerce.",
-                "feat_3_title": "Flussi Agenti",
-                "feat_3_desc": "Gestione campagne marketing completamente autonoma.",
+                
+                "mode_1_title": "Creazione",
+                "mode_1_desc": "Vuoi creare qualcosa? Dacci le tue idee e faremo brillare la tua creatività. Puoi anche inviare riferimenti dai tuoi concorrenti.",
+                "mode_2_title": "Variazione",
+                "mode_2_desc": "Hai una creatività che funziona bene? Con la modalità variazione, possiamo creare automaticamente più creatività simili.",
+                "mode_3_title": "Espansione",
+                "mode_3_desc": "Vuoi portare la tua creatività vincente su più mercati o media? Espandila semplicemente all'istante.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Tutti i diritti riservati.",
                 "kb_title": "Perché MixBanana?",
                 "kb_feat_1_title": "Usa la tua chiave (BYOK)",
@@ -655,12 +664,10 @@
                 "faq_q4": "Cos'è 'Nano Banana Pro'?",
                 "faq_a4": "È la nostra implementazione specializzata del modello Gemini 3 Pro Image, ottimizzata per un'estetica di marketing ad alta conversione.",
                 "faq_q5": "Posso usare direttamente la mia chiave API Google Gemini?",
-                "faq_a5": "Non direttamente. Tuttavia, puoi aggiungere la tua chiave Google Gemini alle impostazioni del tuo account OpenRouter per generare una chiave compatibile. Questo ti permette di usare i tuoi limiti Google su MixBanana."
+                "faq_a5": "Non direttamente. Tuttavia, puoi aggiungere la tua chiave Google Gemini alle impostazioni del tuo account OpenRouter per generare una chiave compatibile. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Scopri come configurare BYOK qui</a>."
             },
             "pl": {
-                "nav_enterprise": "Przedsiębiorstwo",
-                "nav_solutions": "Rozwiązania",
-                "nav_research": "Badania",
+                "nav_explore": "Eksploruj Tryby",
                 "hero_badge": "Przyszłość Marketingu",
                 "hero_title_prefix": "Rozwiązania AI",
                 "hero_title_highlight": "Nowej Generacji",
@@ -673,12 +680,14 @@
                 "card_cta": "Uruchom Aplikację",
                 "beta_link_text": "Wersja Beta",
                 "dashboard_loading": "Generowanie Zasobów...",
-                "feat_1_title": "Globalna Lokalizacja",
-                "feat_1_desc": "Narzędzia do natychmiastowej adaptacji językowej i kulturowej.",
-                "feat_2_title": "Synteza Wideo",
-                "feat_2_desc": "Badania nad modelami wideo nowej generacji dla social commerce.",
-                "feat_3_title": "Przepływy Agenckie",
-                "feat_3_desc": "W pełni autonomiczne zarządzanie kampaniami marketingowymi.",
+                
+                "mode_1_title": "Tworzenie",
+                "mode_1_desc": "Chcesz coś stworzyć? Podrzuć swoje pomysły, a my sprawimy, że Twoja kreacja zabłyśnie. Możesz nawet przesłać referencje od konkurencji.",
+                "mode_2_title": "Wariacja",
+                "mode_2_desc": "Masz dobrze działającą kreację? W trybie wariacji możemy automatycznie stworzyć więcej podobnych kreacji.",
+                "mode_3_title": "Ekspansja",
+                "mode_3_desc": "Chcesz wprowadzić swoją skuteczną kreację na nowe rynki lub media? Po prostu rozszerz ją natychmiastowo.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Wszelkie prawa zastrzeżone.",
                 "kb_title": "Dlaczego MixBanana?",
                 "kb_feat_1_title": "Własny Klucz (BYOK)",
@@ -697,12 +706,10 @@
                 "faq_q4": "Czym jest „Nano Banana Pro”?",
                 "faq_a4": "To nasza specjalistyczna implementacja modelu Gemini 3 Pro Image, zoptymalizowana pod kątem estetyki marketingowej o wysokiej konwersji.",
                 "faq_q5": "Czy mogę użyć bezpośrednio mojego klucza API Google Gemini?",
-                "faq_a5": "Nie bezpośrednio. Możesz jednak dodać swój klucz Google Gemini do ustawień konta OpenRouter, aby wygenerować kompatybilny klucz. Pozwala to na wykorzystanie limitów Google w MixBanana."
+                "faq_a5": "Nie bezpośrednio. Możesz jednak dodać swój klucz Google Gemini do ustawień konta OpenRouter, aby wygenerować kompatybilny klucz. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Dowiedz się, jak skonfigurować BYOK tutaj</a>."
             },
             "ar": {
-                "nav_enterprise": "مؤسسة",
-                "nav_solutions": "حلول",
-                "nav_research": "أبحاث",
+                "nav_explore": "استكشف الأوضاع",
                 "hero_badge": "مستقبل التسويق",
                 "hero_title_prefix": "حلول ذكاء اصطناعي",
                 "hero_title_highlight": "من الجيل القادم",
@@ -715,12 +722,14 @@
                 "card_cta": "تشغيل التطبيق",
                 "beta_link_text": "النسخة التجريبية",
                 "dashboard_loading": "جاري إنشاء الأصول...",
-                "feat_1_title": "التعريب العالمي",
-                "feat_1_desc": "أدوات للتكيف اللغوي والثقافي الفوري.",
-                "feat_2_title": "توليف الفيديو",
-                "feat_2_desc": "بحث في نماذج الفيديو من الجيل القادم للتجارة الاجتماعية.",
-                "feat_3_title": "سير عمل الوكيل",
-                "feat_3_desc": "إدارة حملات تسويقية ذاتية بالكامل.",
+                
+                "mode_1_title": "الخلق",
+                "mode_1_desc": "تريد صنع شيء ما؟ اطرح كل أفكارك وسنجعل إبداعك يتألق. يمكنك حتى إرسال مراجع من منافسيك.",
+                "mode_2_title": "الاختلاف",
+                "mode_2_desc": "هل لديك إبداع جيد الأداء؟ مع وضع الاختلاف، يمكننا صنع المزيد من الإبداعات المشابهة تلقائيًا.",
+                "mode_3_title": "التوسع",
+                "mode_3_desc": "هل تريد جلب إبداعك الجيد الأداء إلى المزيد من الأسواق أو مصادر الوسائط؟ ببساطة قم بتوسيعه على الفور.",
+
                 "footer_rights": "&copy; 2025 MixBanana. جميع الحقوق محفوظة.",
                 "kb_title": "لماذا تختار MixBanana؟",
                 "kb_feat_1_title": "أحضر مفتاحك الخاص (BYOK)",
@@ -739,12 +748,10 @@
                 "faq_q4": "ما هو \"Nano Banana Pro\"؟",
                 "faq_a4": "إنه تطبيقنا المتخصص لنموذج Gemini 3 Pro Image. لقد قمنا بضبط طبقة هندسة الأوامر لضمان مخرجات تلتزم بجماليات التسويق عالية التحويل.",
                 "faq_q5": "هل يمكنني استخدام مفتاح Google Gemini API الخاص بي مباشرة؟",
-                "faq_a5": "ليس مباشرة. ومع ذلك، يمكنك إضافة مفتاح Google Gemini الخاص بك إلى إعدادات حساب OpenRouter لإنشاء مفتاح متوافق. يتيح لك هذا استخدام حدود Google الخاصة بك في MixBanana."
+                "faq_a5": "ليس مباشرة. ومع ذلك، يمكنك إضافة مفتاح Google Gemini الخاص بك إلى إعدادات حساب OpenRouter لإنشاء مفتاح متوافق. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>تعرف على كيفية إعداد BYOK هنا</a>."
             },
             "id": {
-                "nav_enterprise": "Perusahaan",
-                "nav_solutions": "Solusi",
-                "nav_research": "Riset",
+                "nav_explore": "Jelajahi Mode",
                 "hero_badge": "Masa Depan Pemasaran",
                 "hero_title_prefix": "Solusi AI",
                 "hero_title_highlight": "Generasi Berikutnya",
@@ -757,12 +764,14 @@
                 "card_cta": "Buka Aplikasi",
                 "beta_link_text": "Versi Beta",
                 "dashboard_loading": "Membuat Aset Kreatif...",
-                "feat_1_title": "Lokalisasi Global",
-                "feat_1_desc": "Alat untuk adaptasi bahasa dan budaya instan.",
-                "feat_2_title": "Sintesis Video",
-                "feat_2_desc": "Meneliti model video generasi berikutnya untuk social commerce.",
-                "feat_3_title": "Alur Kerja Agen",
-                "feat_3_desc": "Manajemen kampanye pemasaran yang sepenuhnya otonom.",
+                
+                "mode_1_title": "Penciptaan",
+                "mode_1_desc": "Ingin membuat sesuatu? Berikan semua ide Anda dan kami akan membuat materi iklan Anda bersinar. Anda bahkan dapat mengirim referensi dari pesaing.",
+                "mode_2_title": "Variasi",
+                "mode_2_desc": "Punya materi iklan yang berkinerja baik? Dengan mode variasi, kami dapat membuat lebih banyak materi iklan seperti itu secara otomatis.",
+                "mode_3_title": "Ekspansi",
+                "mode_3_desc": "Ingin membawa materi iklan berkinerja baik Anda ke lebih banyak pasar atau sumber media? Cukup perluas secara instan.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Hak cipta dilindungi undang-undang.",
                 "kb_title": "Mengapa Memilih MixBanana?",
                 "kb_feat_1_title": "Bawa Kunci Sendiri (BYOK)",
@@ -781,9 +790,10 @@
                 "faq_q4": "Apa itu \"Nano Banana Pro\"?",
                 "faq_a4": "Ini adalah implementasi khusus kami dari model Gemini 3 Pro Image, dioptimalkan untuk estetika pemasaran konversi tinggi.",
                 "faq_q5": "Bisakah saya menggunakan Kunci API Google Gemini saya secara langsung?",
-                "faq_a5": "Tidak secara langsung. Namun, Anda dapat menambahkan Kunci Google Gemini ke pengaturan akun OpenRouter Anda untuk menghasilkan kunci yang kompatibel. Ini memungkinkan Anda menggunakan kuota Google Anda di MixBanana."
+                "faq_a5": "Tidak secara langsung. Namun, Anda dapat menambahkan Kunci Google Gemini ke pengaturan akun OpenRouter Anda untuk menghasilkan kunci yang kompatibel. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Pelajari cara mengatur BYOK di sini</a>."
             },
             "ms": {
+                "nav_explore": "Terokai Mod",
                 "nav_enterprise": "Perusahaan",
                 "nav_solutions": "Penyelesaian",
                 "nav_research": "Penyelidikan",
@@ -799,12 +809,14 @@
                 "card_cta": "Lancar Aplikasi",
                 "beta_link_text": "Versi Beta",
                 "dashboard_loading": "Menjana Aset Kreatif...",
-                "feat_1_title": "Lokalisasi Global",
-                "feat_1_desc": "Alat untuk adaptasi bahasa dan budaya segera.",
-                "feat_2_title": "Sintesis Video",
-                "feat_2_desc": "Menyelidik model video generasi seterusnya untuk perdagangan sosial.",
-                "feat_3_title": "Aliran Kerja Ejen",
-                "feat_3_desc": "Pengurusan kempen pemasaran autonomi sepenuhnya.",
+                
+                "mode_1_title": "Penciptaan",
+                "mode_1_desc": "Ingin membuat sesuatu? Berikan semua idea anda dan kami akan menjadikan kreatif anda bersinar. Anda juga boleh menghantar rujukan daripada pesaing anda.",
+                "mode_2_title": "Variasi",
+                "mode_2_desc": "Mempunyai kreatif yang berprestasi baik? Dengan mod variasi, kami boleh membuat lebih banyak kreatif seperti itu secara automatik.",
+                "mode_3_title": "Pengembangan",
+                "mode_3_desc": "Ingin membawa kreatif berprestasi baik anda ke lebih banyak pasaran atau sumber media? Cukup kembangkannya dengan serta-merta.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Hak cipta terpelihara.",
                 "kb_title": "Kenapa Pilih MixBanana?",
                 "kb_feat_1_title": "Bawa Kunci Sendiri (BYOK)",
@@ -823,12 +835,10 @@
                 "faq_q4": "Apa itu \"Nano Banana Pro\"?",
                 "faq_a4": "Ia adalah pelaksanaan khusus kami bagi model Gemini 3 Pro Image, dioptimumkan untuk estetika pemasaran penukaran tinggi.",
                 "faq_q5": "Bolehkah saya menggunakan Kunci API Google Gemini saya secara langsung?",
-                "faq_a5": "Tidak secara langsung. Walau bagaimanapun, anda boleh menambah Kunci Google Gemini anda ke tetapan akaun OpenRouter untuk menjana kunci yang serasi. Ini membolehkan anda menggunakan had Google anda di MixBanana."
+                "faq_a5": "Tidak secara langsung. Walau bagaimanapun, anda boleh menambah Kunci Google Gemini anda ke tetapan akaun OpenRouter untuk menjana kunci yang serasi. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Ketahui cara menyediakan BYOK di sini</a>."
             },
             "th": {
-                "nav_enterprise": "องค์กร",
-                "nav_solutions": "โซลูชัน",
-                "nav_research": "วิจัย",
+                "nav_explore": "สำรวจโหมด",
                 "hero_badge": "อนาคตของการตลาด",
                 "hero_title_prefix": "โซลูชัน AI",
                 "hero_title_highlight": "ยุคถัดไป",
@@ -841,12 +851,14 @@
                 "card_cta": "เปิดแอป",
                 "beta_link_text": "เวอร์ชันเบต้า",
                 "dashboard_loading": "กำลังสร้างสินทรัพย์...",
-                "feat_1_title": "การปรับให้เข้ากับท้องถิ่น",
-                "feat_1_desc": "เครื่องมือสำหรับการปรับภาษาและวัฒนธรรมทันที",
-                "feat_2_title": "การสังเคราะห์วิดีโอ",
-                "feat_2_desc": "วิจัยโมเดลวิดีโอยุคถัดไปสำหรับการค้าผ่านโซเชียล",
-                "feat_3_title": "เวิร์กโฟลว์ตัวแทน",
-                "feat_3_desc": "การจัดการแคมเปญการตลาดแบบอัตโนมัติเต็มรูปแบบ",
+                
+                "mode_1_title": "การสร้างสรรค์",
+                "mode_1_desc": "อยากทำอะไรบางอย่างไหม? ใส่ไอเดียทั้งหมดของคุณแล้วเราจะทำให้ผลงานสร้างสรรค์ของคุณเปล่งประกาย คุณสามารถส่งข้อมูลอ้างอิงจากคู่แข่งได้",
+                "mode_2_title": "การเปลี่ยนแปลง",
+                "mode_2_desc": "มีผลงานสร้างสรรค์ที่ทำผลงานได้ดีใช่ไหม? ด้วยโหมดการเปลี่ยนแปลง เราสามารถสร้างผลงานที่คล้ายกันได้โดยอัตโนมัติ",
+                "mode_3_title": "การขยาย",
+                "mode_3_desc": "ต้องการนำผลงานที่ทำผลงานได้ดีไปยังตลาดหรือสื่ออื่น ๆ หรือไม่? เพียงแค่ขยายมันทันที",
+
                 "footer_rights": "&copy; 2025 MixBanana. สงวนลิขสิทธิ์.",
                 "kb_title": "ทำไมต้องเลือก MixBanana?",
                 "kb_feat_1_title": "นำคีย์ของคุณมาเอง (BYOK)",
@@ -865,9 +877,10 @@
                 "faq_q4": "\"Nano Banana Pro\" คืออะไร?",
                 "faq_a4": "มันคือการใช้งานเฉพาะของเราสำหรับโมเดล Gemini 3 Pro Image ที่ปรับให้เหมาะสมเพื่อความสวยงามทางการตลาดที่มีการแปลงสูง",
                 "faq_q5": "ฉันสามารถใช้คีย์ API ของ Google Gemini โดยตรงได้หรือไม่?",
-                "faq_a5": "ไม่ได้โดยตรง อย่างไรก็ตาม คุณสามารถเพิ่มคีย์ Google Gemini ลงในบัญชี OpenRouter ของคุณเพื่อสร้างคีย์ที่เข้ากันได้ สิ่งนี้ช่วยให้คุณใช้โควต้า Google ของคุณใน MixBanana ได้"
+                "faq_a5": "ไม่ได้โดยตรง อย่างไรก็ตาม คุณสามารถเพิ่มคีย์ Google Gemini ลงในบัญชี OpenRouter ของคุณเพื่อสร้างคีย์ที่เข้ากันได้ <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>เรียนรู้วิธีตั้งค่า BYOK ที่นี่</a>"
             },
             "vi": {
+                "nav_explore": "Khám Phá Chế Độ",
                 "nav_enterprise": "Doanh nghiệp",
                 "nav_solutions": "Giải pháp",
                 "nav_research": "Nghiên cứu",
@@ -883,12 +896,14 @@
                 "card_cta": "Mở Ứng dụng",
                 "beta_link_text": "Phiên bản Beta",
                 "dashboard_loading": "Đang tạo tài sản...",
-                "feat_1_title": "Bản địa hóa Toàn cầu",
-                "feat_1_desc": "Công cụ thích ứng ngôn ngữ và văn hóa tức thì.",
-                "feat_2_title": "Tổng hợp Video",
-                "feat_2_desc": "Nghiên cứu mô hình video thế hệ mới cho thương mại xã hội.",
-                "feat_3_title": "Quy trình Tác nhân",
-                "feat_3_desc": "Quản lý chiến dịch tiếp thị hoàn toàn tự động.",
+                
+                "mode_1_title": "Sáng tạo",
+                "mode_1_desc": "Bạn muốn tạo ra thứ gì đó? Hãy đưa ra ý tưởng và chúng tôi sẽ làm cho sáng tạo của bạn tỏa sáng. Bạn thậm chí có thể gửi tham khảo từ đối thủ.",
+                "mode_2_title": "Biến thể",
+                "mode_2_desc": "Bạn có một mẫu quảng cáo hiệu quả? Với chế độ biến thể, chúng tôi có thể tự động tạo ra nhiều mẫu tương tự.",
+                "mode_3_title": "Mở rộng",
+                "mode_3_desc": "Muốn đưa mẫu quảng cáo hiệu quả của bạn đến nhiều thị trường hoặc nguồn truyền thông hơn? Chỉ cần mở rộng nó ngay lập tức.",
+
                 "footer_rights": "&copy; 2025 MixBanana. Bảo lưu mọi quyền.",
                 "kb_title": "Tại sao chọn MixBanana?",
                 "kb_feat_1_title": "Dùng khóa của riêng bạn (BYOK)",
@@ -907,7 +922,7 @@
                 "faq_q4": "\"Nano Banana Pro\" là gì?",
                 "faq_a4": "Đó là triển khai chuyên biệt của chúng tôi đối với mô hình Gemini 3 Pro Image. Chúng tôi đã tinh chỉnh lớp kỹ thuật nhắc lệnh để đảm bảo đầu ra tuân thủ thẩm mỹ tiếp thị chuyển đổi cao.",
                 "faq_q5": "Tôi có thể sử dụng trực tiếp khóa API Google Gemini của mình không?",
-                "faq_a5": "Không trực tiếp. Tuy nhiên, bạn có thể thêm Khóa Google Gemini vào cài đặt tài khoản OpenRouter để tạo khóa tương thích. Điều này cho phép bạn sử dụng hạn ngạch Google của mình trên MixBanana."
+                "faq_a5": "Không trực tiếp. Tuy nhiên, bạn có thể thêm Khóa Google Gemini vào cài đặt tài khoản OpenRouter để tạo khóa tương thích. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Tìm hiểu cách thiết lập BYOK tại đây</a>."
             }
         };
 
