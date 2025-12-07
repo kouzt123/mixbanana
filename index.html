@@ -143,12 +143,22 @@
                         </p>
                         
                         <!-- Primary & Secondary Actions -->
-                        <div class="flex flex-col items-center md:items-start gap-3 w-full md:w-auto">
-                            <a href="https://images.mixbanana.com" target="_blank" class="w-full md:w-auto bg-banana-yellow hover-banana-yellow text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 group/btn">
-                                <span data-i18n="card_cta">Launch App</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rtl:rotate-180"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                            </a>
-                            <a href="https://beta.mixbanana.com" target="_blank" class="text-xs text-gray-500 hover:text-[#FFE135] transition-colors flex items-center gap-1">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-col sm:flex-row gap-3 w-full">
+                                <!-- Button 1: Launch App -->
+                                <a href="https://images.mixbanana.com" target="_blank" class="flex-1 sm:flex-none w-full sm:w-auto bg-banana-yellow hover-banana-yellow text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 group/btn">
+                                    <span data-i18n="card_cta">Launch App</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rtl:rotate-180"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                </a>
+                                
+                                <!-- Button 2: Get OpenRouter Key -->
+                                <a href="https://openrouter.ai/keys" target="_blank" class="flex-1 sm:flex-none w-full sm:w-auto border border-white/20 hover:border-banana-yellow hover:text-banana-yellow text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
+                                    <span data-i18n="card_cta_key">Get API Key</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                </a>
+                            </div>
+
+                            <a href="https://beta.mixbanana.com" target="_blank" class="text-xs text-gray-500 hover:text-[#FFE135] transition-colors flex items-center gap-1 self-center sm:self-start">
                                 <span data-i18n="beta_link_text">Beta Version</span>
                                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rtl:rotate-180"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                             </a>
@@ -338,6 +348,7 @@
                 "card_title": "MixBanana by Nano Banana Pro",
                 "card_desc": "A specialized marketing creative generator. Create high-fidelity, multi-language, and multi-ratio assets in seconds using our Bring-Your-Own-Key infrastructure.",
                 "card_cta": "Launch App",
+                "card_cta_key": "Get API Key",
                 "beta_link_text": "Beta Version",
                 "dashboard_loading": "Generating Creative Assets...",
                 
@@ -381,6 +392,7 @@
                 "card_title": "Nano Banana Pro 驱动的 MixBanana",
                 "card_desc": "专业的营销创意生成器。使用我们自带密钥（BYOK）的基础设施，在几秒钟内创建高保真、多语言和多种比例的资产。",
                 "card_cta": "启动应用",
+                "card_cta_key": "获取 API 密钥",
                 "beta_link_text": "访问测试版",
                 "dashboard_loading": "正在生成创意资产...",
                 
@@ -423,6 +435,7 @@
                 "card_title": "Nano Banana Pro 驅動的 MixBanana",
                 "card_desc": "專業的行銷創意生成器。使用我們自帶密鑰（BYOK）的基礎設施，在幾秒鐘內創建高保真、多語言和多種比例的資產。",
                 "card_cta": "啟動應用",
+                "card_cta_key": "獲取 API 金鑰",
                 "beta_link_text": "訪問測試版",
                 "dashboard_loading": "正在生成創意資產...",
                 
@@ -465,6 +478,7 @@
                 "card_title": "MixBanana por Nano Banana Pro",
                 "card_desc": "Un generador creativo de marketing especializado. Cree activos de alta fidelidad, en múltiples idiomas y relaciones de aspecto en segundos.",
                 "card_cta": "Iniciar App",
+                "card_cta_key": "Obtener Clave API",
                 "beta_link_text": "Versión Beta",
                 "dashboard_loading": "Generando Activos Creativos...",
                 
@@ -510,6 +524,7 @@
                 "card_title": "MixBanana por Nano Banana Pro",
                 "card_desc": "Um gerador criativo de marketing especializado. Crie ativos de alta fidelidade, multi-idioma e multi-formato em segundos.",
                 "card_cta": "Iniciar App",
+                "card_cta_key": "Obter Chave API",
                 "beta_link_text": "Versão Beta",
                 "dashboard_loading": "Gerando Ativos Criativos...",
                 
@@ -552,6 +567,7 @@
                 "card_title": "MixBanana par Nano Banana Pro",
                 "card_desc": "Générateur créatif marketing spécialisé. Créez des actifs haute fidélité, multilingues et multi-formats en quelques secondes.",
                 "card_cta": "Lancer l'App",
+                "card_cta_key": "Obtenir Clé API",
                 "beta_link_text": "Version Bêta",
                 "dashboard_loading": "Génération des Actifs...",
                 
@@ -594,6 +610,7 @@
                 "card_title": "MixBanana von Nano Banana Pro",
                 "card_desc": "Ein spezialisierter Marketing-Generator. Erstellen Sie in Sekunden High-Fidelity-, mehrsprachige und multiformatige Assets.",
                 "card_cta": "App Starten",
+                "card_cta_key": "API-Schlüssel erhalten",
                 "beta_link_text": "Beta-Version",
                 "dashboard_loading": "Generiere Assets...",
                 
@@ -636,6 +653,7 @@
                 "card_title": "MixBanana di Nano Banana Pro",
                 "card_desc": "Un generatore creativo di marketing specializzato. Crea asset ad alta fedeltà, multilingua e multiformato in pochi secondi.",
                 "card_cta": "Avvia App",
+                "card_cta_key": "Ottieni Chiave API",
                 "beta_link_text": "Versione Beta",
                 "dashboard_loading": "Generazione Asset...",
                 
@@ -678,6 +696,7 @@
                 "card_title": "MixBanana od Nano Banana Pro",
                 "card_desc": "Specjalistyczny generator kreatywny dla marketingu. Twórz wysokiej jakości zasoby w wielu językach i formatach w kilka sekund.",
                 "card_cta": "Uruchom Aplikację",
+                "card_cta_key": "Pobierz Klucz API",
                 "beta_link_text": "Wersja Beta",
                 "dashboard_loading": "Generowanie Zasobów...",
                 
@@ -720,6 +739,7 @@
                 "card_title": "MixBanana بواسطة Nano Banana Pro",
                 "card_desc": "مولد إبداعي تسويقي متخصص. أنشئ أصولاً عالية الدقة ومتعددة اللغات والأبعاد في ثوانٍ.",
                 "card_cta": "تشغيل التطبيق",
+                "card_cta_key": "احصل على مفتاح API",
                 "beta_link_text": "النسخة التجريبية",
                 "dashboard_loading": "جاري إنشاء الأصول...",
                 
@@ -762,6 +782,7 @@
                 "card_title": "MixBanana oleh Nano Banana Pro",
                 "card_desc": "Generator kreatif pemasaran khusus. Buat aset berkualitas tinggi, multi-bahasa, dan multi-rasio dalam hitungan detik.",
                 "card_cta": "Buka Aplikasi",
+                "card_cta_key": "Dapatkan Kunci API",
                 "beta_link_text": "Versi Beta",
                 "dashboard_loading": "Membuat Aset Kreatif...",
                 
@@ -807,6 +828,7 @@
                 "card_title": "MixBanana oleh Nano Banana Pro",
                 "card_desc": "Penjana kreatif pemasaran khusus. Cipta aset berkualiti tinggi, pelbagai bahasa dan nisbah dalam beberapa saat.",
                 "card_cta": "Lancar Aplikasi",
+                "card_cta_key": "Dapatkan Kunci API",
                 "beta_link_text": "Versi Beta",
                 "dashboard_loading": "Menjana Aset Kreatif...",
                 
@@ -849,6 +871,7 @@
                 "card_title": "MixBanana โดย Nano Banana Pro",
                 "card_desc": "เครื่องสร้างสรรค์การตลาดเฉพาะทาง สร้างสินทรัพย์ความละเอียดสูง หลากภาษา และหลายสัดส่วนในไม่กี่วินาที",
                 "card_cta": "เปิดแอป",
+                "card_cta_key": "รับคีย์ API",
                 "beta_link_text": "เวอร์ชันเบต้า",
                 "dashboard_loading": "กำลังสร้างสินทรัพย์...",
                 
@@ -894,6 +917,7 @@
                 "card_title": "MixBanana bởi Nano Banana Pro",
                 "card_desc": "Trình tạo sáng tạo tiếp thị chuyên dụng. Tạo tài sản độ trung thực cao, đa ngôn ngữ và đa tỷ lệ trong vài giây.",
                 "card_cta": "Mở Ứng dụng",
+                "card_cta_key": "Lấy Khóa API",
                 "beta_link_text": "Phiên bản Beta",
                 "dashboard_loading": "Đang tạo tài sản...",
                 
