@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workflow Guide | MixBanana</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" /> 
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
@@ -38,6 +42,21 @@
             font-feature-settings: "tnum";
             font-variant-numeric: tabular-nums;
         }
+        /* Browser Mockup Header */
+        .browser-header {
+            background: rgba(255,255,255,0.05);
+            height: 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            gap: 6px;
+        }
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .dot-r { background-color: #FF5F56; }
+        .dot-y { background-color: #FFBD2E; }
+        .dot-g { background-color: #27C93F; }
+
         /* Custom Scrollbar for Language Dropdown */
         select option {
             background-color: #1a1a1a;
@@ -102,55 +121,60 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Step 1.1 -->
                     <div class="space-y-3">
-                        <div class="aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-600 text-xs uppercase tracking-widest relative overflow-hidden group">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
-                            <img src="1-1.png" alt="sign up">
+                        <div class="aspect-[16/10] bg-[#111] rounded-lg border border-white/10 overflow-hidden group shadow-lg">
+                            <div class="browser-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+                            <!-- Image 1-1 -->
+                            <img src="1-1.png" alt="Sign Up" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <h3 class="font-semibold text-white" data-i18n="step1_1_title">1. Sign Up</h3>
                         <p class="text-sm text-gray-400">
-                            <span data-i18n="step1_1_desc">Go to</span> <a href="https://openrouter.ai" target="_blank" class="text-banana-yellow hover:underline">openrouter.ai</a> <span data-i18n="step1_1_desc_2">and create an account. You can use Google or GitHub login.</span>
+                            <span data-i18n="step1_1_desc">Go to</span> <a href="https://openrouter.ai" target="_blank" class="text-banana-yellow hover:underline">openrouter.ai</a> <span data-i18n="step1_1_desc_2">and create an account.</span>
                         </p>
                     </div>
 
                     <!-- Step 1.2 -->
                     <div class="space-y-3">
-                        <div class="aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-600 text-xs uppercase tracking-widest relative overflow-hidden group">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
-                            <img src="1-2.png" alt="credits">
+                        <div class="aspect-[16/10] bg-[#111] rounded-lg border border-white/10 overflow-hidden group shadow-lg">
+                            <div class="browser-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+                            <!-- Image 1-2 -->
+                            <img src="1-2.png" alt="Add Credits" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <h3 class="font-semibold text-white" data-i18n="step1_2_title">2. Add Credits</h3>
-                        <p class="text-sm text-gray-400" data-i18n="step1_2_desc">Navigate to "Credits". Add a small amount (e.g., $5) to start. Crypto (USDC) is supported for privacy.</p>
+                        <p class="text-sm text-gray-400" data-i18n="step1_2_desc">Navigate to "Credits". Add a small amount (e.g., $5) to start.</p>
                     </div>
 
                     <!-- Step 1.3 -->
                     <div class="space-y-3">
-                        <div class="aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-600 text-xs uppercase tracking-widest relative overflow-hidden group">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
-                            <img src="1-3.png" alt="get key">
+                        <div class="aspect-[16/10] bg-[#111] rounded-lg border border-white/10 overflow-hidden group shadow-lg">
+                            <div class="browser-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+                            <!-- Image 1-3 -->
+                            <img src="1-3.png" alt="Create Key" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <h3 class="font-semibold text-white" data-i18n="step1_3_title">3. Create Key</h3>
-                        <p class="text-sm text-gray-400" data-i18n="step1_3_desc">Go to "Keys", click "Create Key". Name it "MixBanana". Copy this key—you will need it to log in.</p>
+                        <p class="text-sm text-gray-400" data-i18n="step1_3_desc">Go to "Keys", click "Create Key". Copy this key.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. The 3 Modes -->
+        <!-- 2. The 3 Modes (Alternating Layout) -->
         <section class="mb-20">
             <div class="flex items-center gap-4 mb-8">
                 <div class="w-10 h-10 bg-banana-yellow text-black font-bold rounded-full flex items-center justify-center step-number text-xl">2</div>
                 <h2 class="text-2xl font-bold" data-i18n="step2_title">Choose Your Mode</h2>
             </div>
 
-            <div class="space-y-6">
+            <div class="space-y-8">
                 <!-- Creation -->
-                <div class="glass-card rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start hover:bg-white/[0.02] transition-colors">
-                    <div class="w-full md:w-1/3 aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-600 text-xs">
-                        <img src="2-1.png" alt="create mode">
+                <div class="glass-card rounded-xl p-6 flex flex-col md:flex-row gap-8 items-center hover:bg-white/[0.02] transition-colors group">
+                    <div class="w-full md:w-5/12 aspect-video bg-[#111] rounded-lg border border-white/10 overflow-hidden shadow-lg shrink-0">
+                        <div class="browser-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+                        <!-- Image 2-1 -->
+                        <img src="2-1.png" alt="Creation Mode UI" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex-1">
                         <h3 class="text-xl font-bold text-banana-yellow mb-2" data-i18n="mode_create_title">✨ Creation Mode</h3>
-                        <p class="text-gray-300 mb-4" data-i18n="mode_create_desc">Start from scratch. Upload up to 10 reference assets (logos, competitor ads, mood boards) and describe your vision.</p>
+                        <p class="text-gray-300 mb-4" data-i18n="mode_create_desc">Start from scratch. Upload up to 10 reference assets and describe your vision.</p>
                         <ul class="text-sm text-gray-500 list-disc list-inside space-y-1">
                             <li data-i18n="mode_create_tip1">Best for: New campaigns, fresh concepts.</li>
                             <li data-i18n="mode_create_tip2">Input: Text Prompt + Optional Reference Images.</li>
@@ -158,14 +182,16 @@
                     </div>
                 </div>
 
-                <!-- Variation -->
-                <div class="glass-card rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start hover:bg-white/[0.02] transition-colors">
-                    <div class="w-full md:w-1/3 aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-600 text-xs">
-                        <img src="2-2.png" alt="var mode">
+                <!-- Variation (Reversed Layout) -->
+                <div class="glass-card rounded-xl p-6 flex flex-col md:flex-row-reverse gap-8 items-center hover:bg-white/[0.02] transition-colors group">
+                    <div class="w-full md:w-5/12 aspect-video bg-[#111] rounded-lg border border-white/10 overflow-hidden shadow-lg shrink-0">
+                        <div class="browser-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+                        <!-- Image 2-2 -->
+                        <img src="2-2.png" alt="Variation Mode UI" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex-1">
                         <h3 class="text-xl font-bold text-banana-yellow mb-2" data-i18n="mode_var_title">⚡ Variation Mode</h3>
-                        <p class="text-gray-300 mb-4" data-i18n="mode_var_desc">Upload one high-performing creative. The AI will generate diverse visual variations while keeping the core message intact.</p>
+                        <p class="text-gray-300 mb-4" data-i18n="mode_var_desc">Upload one high-performing creative. The AI will generate diverse visual variations.</p>
                         <ul class="text-sm text-gray-500 list-disc list-inside space-y-1">
                             <li data-i18n="mode_var_tip1">Best for: A/B testing, refreshing stale ads.</li>
                             <li data-i18n="mode_var_tip2">Input: Single Reference Image.</li>
@@ -174,15 +200,17 @@
                 </div>
 
                 <!-- Expansion -->
-                <div class="glass-card rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start hover:bg-white/[0.02] transition-colors">
-                    <div class="w-full md:w-1/3 aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-600 text-xs">
-                        <img src="2-3.png" alt="expan mode">
+                <div class="glass-card rounded-xl p-6 flex flex-col md:flex-row gap-8 items-center hover:bg-white/[0.02] transition-colors group">
+                    <div class="w-full md:w-5/12 aspect-video bg-[#111] rounded-lg border border-white/10 overflow-hidden shadow-lg shrink-0">
+                        <div class="browser-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+                        <!-- Image 2-3 -->
+                        <img src="2-3.png" alt="Expansion Mode UI" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="flex-1">
                         <h3 class="text-xl font-bold text-banana-yellow mb-2" data-i18n="mode_exp_title">🌍 Expansion Mode</h3>
-                        <p class="text-gray-300 mb-4" data-i18n="mode_exp_desc">Skip generation and go straight to formatting. Take an existing asset and instantly resize it or translate text.</p>
+                        <p class="text-gray-300 mb-4" data-i18n="mode_exp_desc">Skip generation and go straight to formatting. Resize or translate instantly.</p>
                         <ul class="text-sm text-gray-500 list-disc list-inside space-y-1">
-                            <li data-i18n="mode_exp_tip1">Best for: Localization, resizing for different platforms.</li>
+                            <li data-i18n="mode_exp_tip1">Best for: Localization, resizing.</li>
                             <li data-i18n="mode_exp_tip2">Input: Completed Asset.</li>
                         </ul>
                     </div>
@@ -197,7 +225,7 @@
                 <h2 class="text-2xl font-bold" data-i18n="step3_title">Manage & Download</h2>
             </div>
 
-            <div class="glass-card rounded-xl p-8">
+            <div class="glass-card rounded-xl p-8 group">
                 <div class="flex flex-col md:flex-row gap-8 items-center">
                     <div class="flex-1 space-y-4">
                         <h3 class="text-lg font-semibold" data-i18n="lib_title">Your Asset Library</h3>
@@ -210,8 +238,10 @@
                             <span class="text-xs text-gray-400" data-i18n="lib_pro_desc">Use the "Download All (ZIP)" button to get a neatly organized folder containing all aspect ratios and language variants in one click.</span>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 aspect-video bg-white/5 rounded-lg border border-white/10 flex items-center justify-center text-gray-600 text-xs">
-                        <img src="3-1.png" alt="history mode">
+                    <div class="w-full md:w-1/2 aspect-video bg-[#111] rounded-lg border border-white/10 overflow-hidden shadow-lg">
+                        <div class="browser-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+                        <!-- Image 3-1 -->
+                        <img src="3-1.png" alt="History/Download Page" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
             </div>
@@ -370,7 +400,6 @@
                 "dev_desc": "發現漏洞或喜歡這個工具？留下一筆小費以幫助維持服務器運行。",
                 "footer_rights": "&copy; 2025 MixBanana. 保留所有權利。"
             },
-            // ... (Other languages follow same pattern, omitted for brevity but logic is identical to index.html)
             "es": {
                 "nav_back": "Volver al Inicio",
                 "nav_title": "Flujo de Trabajo MixBanana",
@@ -409,45 +438,439 @@
                 "dev_desc": "¿Encontraste un error o te gusta la herramienta? Deja una propina.",
                 "footer_rights": "&copy; 2025 MixBanana. Todos los derechos reservados."
             },
-            // Note: I will programmatically fill the rest based on the pattern if needed, 
-            // but the structure supports all 14 languages defined in index.html.
+            "pt": {
+                "nav_back": "Voltar ao Início",
+                "nav_title": "Fluxo de Trabalho MixBanana",
+                "header_title": "Domine o Fluxo",
+                "header_subtitle": "Seu guia passo a passo para criar ativos de nível empresarial.",
+                "step1_title": "Obtenha sua Chave API",
+                "step1_1_title": "1. Inscreva-se",
+                "step1_1_desc": "Vá para",
+                "step1_1_desc_2": "e crie uma conta. Use Google ou GitHub.",
+                "step1_2_title": "2. Adicionar Créditos",
+                "step1_2_desc": "Vá em 'Credits'. Adicione uma pequena quantia (ex: $5). Cripto (USDC) é aceito.",
+                "step1_3_title": "3. Criar Chave",
+                "step1_3_desc": "Vá em 'Keys', clique em 'Create Key'. Nomeie 'MixBanana'. Copie a chave para entrar.",
+                "step2_title": "Escolha seu Modo",
+                "mode_create_title": "✨ Modo Criação",
+                "mode_create_desc": "Comece do zero. Envie até 10 referências e descreva sua visão.",
+                "mode_create_tip1": "Melhor para: Novas campanhas, conceitos novos.",
+                "mode_create_tip2": "Entrada: Texto + Imagens opcionais.",
+                "mode_var_title": "⚡ Modo Variação",
+                "mode_var_desc": "Envie um criativo de sucesso. A IA gerará variações visuais mantendo a mensagem.",
+                "mode_var_tip1": "Melhor para: Testes A/B, renovar anúncios.",
+                "mode_var_tip2": "Entrada: Uma imagem de referência.",
+                "mode_exp_title": "🌍 Modo Expansão",
+                "mode_exp_desc": "Pule a geração e vá para a formatação. Redimensione ou traduza ativos existentes instantaneamente.",
+                "mode_exp_tip1": "Melhor para: Localização, redimensionamento.",
+                "mode_exp_tip2": "Entrada: Ativo concluído.",
+                "step3_title": "Gerenciar e Baixar",
+                "lib_title": "Sua Biblioteca de Ativos",
+                "lib_desc": "Cada projeto é salvo localmente vinculado à sua chave API. Você pode voltar a 'Criações Passadas' para baixar.",
+                "lib_pro_title": "DICA PRO:",
+                "lib_pro_desc": "Use o botão 'Baixar Tudo (ZIP)' para obter uma pasta organizada com todas as variantes.",
+                "support_title": "Ainda tem dúvidas?",
+                "discord_title": "Junte-se à Comunidade",
+                "discord_desc": "Obtenha ajuda e compartilhe suas criações.",
+                "dev_title": "Apoie o Desenvolvimento",
+                "dev_desc": "Encontrou um erro ou gostou da ferramenta? Deixe uma gorjeta.",
+                "footer_rights": "&copy; 2025 MixBanana. Todos os direitos reservados."
+            },
+            "fr": {
+                "nav_back": "Retour à l'accueil",
+                "nav_title": "Flux de Travail MixBanana",
+                "header_title": "Maîtrisez le Flux",
+                "header_subtitle": "Votre guide étape par étape pour créer des actifs de qualité entreprise.",
+                "step1_title": "Obtenez votre Clé API",
+                "step1_1_title": "1. Inscrivez-vous",
+                "step1_1_desc": "Allez sur",
+                "step1_1_desc_2": "et créez un compte. Utilisez Google ou GitHub.",
+                "step1_2_title": "2. Ajoutez des Crédits",
+                "step1_2_desc": "Allez dans 'Credits'. Ajoutez un petit montant (ex: 5$). Crypto (USDC) accepté.",
+                "step1_3_title": "3. Créez la Clé",
+                "step1_3_desc": "Allez dans 'Keys', cliquez sur 'Create Key'. Nommez-la 'MixBanana'. Copiez cette clé.",
+                "step2_title": "Choisissez votre Mode",
+                "mode_create_title": "✨ Mode Création",
+                "mode_create_desc": "Partez de zéro. Téléchargez jusqu'à 10 références et décrivez votre vision.",
+                "mode_create_tip1": "Idéal pour : Nouvelles campagnes, nouveaux concepts.",
+                "mode_create_tip2": "Entrée : Prompt Texte + Images optionnelles.",
+                "mode_var_title": "⚡ Mode Variation",
+                "mode_var_desc": "Téléchargez une créa performante. L'IA générera des variations visuelles.",
+                "mode_var_tip1": "Idéal pour : Tests A/B, rafraîchir les pubs.",
+                "mode_var_tip2": "Entrée : Une image de référence.",
+                "mode_exp_title": "🌍 Mode Expansion",
+                "mode_exp_desc": "Passez directement au formatage. Redimensionnez ou traduisez instantanément.",
+                "mode_exp_tip1": "Idéal pour : Localisation, redimensionnement.",
+                "mode_exp_tip2": "Entrée : Actif terminé.",
+                "step3_title": "Gérer et Télécharger",
+                "lib_title": "Votre Bibliothèque",
+                "lib_desc": "Chaque projet est sauvegardé localement lié à votre clé API. Revenez voir 'Créations Passées'.",
+                "lib_pro_title": "CONSEIL PRO :",
+                "lib_pro_desc": "Utilisez 'Tout Télécharger (ZIP)' pour obtenir un dossier organisé avec toutes les variantes.",
+                "support_title": "Des questions ?",
+                "discord_title": "Rejoignez la Communauté",
+                "discord_desc": "Obtenez de l'aide et partagez vos créations.",
+                "dev_title": "Soutenir le Développement",
+                "dev_desc": "Trouvé un bug ou aimé l'outil ? Laissez un pourboire.",
+                "footer_rights": "&copy; 2025 MixBanana. Tous droits réservés."
+            },
+            "de": {
+                "nav_back": "Zurück zur Startseite",
+                "nav_title": "MixBanana Workflow",
+                "header_title": "Den Workflow meistern",
+                "header_subtitle": "Ihre Schritt-für-Schritt-Anleitung zur Erstellung von Enterprise-Assets.",
+                "step1_title": "API-Schlüssel erhalten",
+                "step1_1_title": "1. Registrieren",
+                "step1_1_desc": "Gehen Sie zu",
+                "step1_1_desc_2": "und erstellen Sie ein Konto. Google oder GitHub Login möglich.",
+                "step1_2_title": "2. Guthaben aufladen",
+                "step1_2_desc": "Gehen Sie zu 'Credits'. Laden Sie einen kleinen Betrag (z.B. $5) auf. Krypto (USDC) möglich.",
+                "step1_3_title": "3. Schlüssel erstellen",
+                "step1_3_desc": "Gehen Sie zu 'Keys', klicken Sie 'Create Key'. Nennen Sie ihn 'MixBanana'. Kopieren Sie ihn.",
+                "step2_title": "Modus wählen",
+                "mode_create_title": "✨ Erstellungsmodus",
+                "mode_create_desc": "Starten Sie bei Null. Laden Sie bis zu 10 Referenzen hoch und beschreiben Sie Ihre Vision.",
+                "mode_create_tip1": "Beste für: Neue Kampagnen, frische Konzepte.",
+                "mode_create_tip2": "Eingabe: Text-Prompt + Optionale Bilder.",
+                "mode_var_title": "⚡ Variationsmodus",
+                "mode_var_desc": "Laden Sie ein erfolgreiches Creative hoch. Die KI generiert visuelle Variationen.",
+                "mode_var_tip1": "Beste für: A/B-Tests, Auffrischung von Anzeigen.",
+                "mode_var_tip2": "Eingabe: Ein Referenzbild.",
+                "mode_exp_title": "🌍 Erweiterungsmodus",
+                "mode_exp_desc": "Direkt zur Formatierung. Vorhandene Assets sofort skalieren oder übersetzen.",
+                "mode_exp_tip1": "Beste für: Lokalisierung, Größenanpassung.",
+                "mode_exp_tip2": "Eingabe: Fertiges Asset.",
+                "step3_title": "Verwalten & Laden",
+                "lib_title": "Ihre Asset-Bibliothek",
+                "lib_desc": "Jedes Projekt wird lokal gespeichert. Besuchen Sie 'Vergangene Kreationen' jederzeit.",
+                "lib_pro_title": "PRO-TIPP:",
+                "lib_pro_desc": "Nutzen Sie 'Alles herunterladen (ZIP)' für einen organisierten Ordner.",
+                "support_title": "Noch Fragen?",
+                "discord_title": "Community beitreten",
+                "discord_desc": "Erhalten Sie Hilfe und teilen Sie Ihre Kreationen.",
+                "dev_title": "Entwicklung unterstützen",
+                "dev_desc": "Fehler gefunden oder Tool gemocht? Hinterlassen Sie ein Trinkgeld.",
+                "footer_rights": "&copy; 2025 MixBanana. Alle Rechte vorbehalten."
+            },
+            "it": {
+                "nav_back": "Torna alla Home",
+                "nav_title": "Flusso di Lavoro MixBanana",
+                "header_title": "Padroneggia il Flusso",
+                "header_subtitle": "La tua guida passo-passo per creare risorse di livello enterprise.",
+                "step1_title": "Ottieni Chiave API",
+                "step1_1_title": "1. Iscriviti",
+                "step1_1_desc": "Vai su",
+                "step1_1_desc_2": "e crea un account. Usa Google o GitHub.",
+                "step1_2_title": "2. Aggiungi Crediti",
+                "step1_2_desc": "Vai su 'Credits'. Aggiungi un piccolo importo (es. $5). Crypto (USDC) supportato.",
+                "step1_3_title": "3. Crea Chiave",
+                "step1_3_desc": "Vai su 'Keys', clicca 'Create Key'. Chiamala 'MixBanana'. Copia questa chiave.",
+                "step2_title": "Scegli il Modo",
+                "mode_create_title": "✨ Modo Creazione",
+                "mode_create_desc": "Parti da zero. Carica fino a 10 riferimenti e descrivi la tua visione.",
+                "mode_create_tip1": "Ideale per: Nuove campagne, nuovi concetti.",
+                "mode_create_tip2": "Input: Prompt Testuale + Immagini opzionali.",
+                "mode_var_title": "⚡ Modo Variazione",
+                "mode_var_desc": "Carica un creativo vincente. L'IA genererà variazioni visive.",
+                "mode_var_tip1": "Ideale per: A/B testing, rinfrescare annunci.",
+                "mode_var_tip2": "Input: Un'immagine di riferimento.",
+                "mode_exp_title": "🌍 Modo Espansione",
+                "mode_exp_desc": "Vai dritto alla formattazione. Ridimensiona o traduci asset esistenti all'istante.",
+                "mode_exp_tip1": "Ideale per: Localizzazione, ridimensionamento.",
+                "mode_exp_tip2": "Input: Asset completato.",
+                "step3_title": "Gestisci e Scarica",
+                "lib_title": "La tua Libreria",
+                "lib_desc": "Ogni progetto è salvato localmente. Rivisita 'Creazioni Passate' per scaricare.",
+                "lib_pro_title": "CONSIGLIO PRO:",
+                "lib_pro_desc": "Usa 'Scarica Tutto (ZIP)' per ottenere una cartella organizzata.",
+                "support_title": "Domande?",
+                "discord_title": "Unisciti alla Community",
+                "discord_desc": "Ricevi aiuto e condividi le tue creazioni.",
+                "dev_title": "Supporta lo Sviluppo",
+                "dev_desc": "Trovato un bug? Lascia una mancia per mantenere i server attivi.",
+                "footer_rights": "&copy; 2025 MixBanana. Tutti i diritti riservati."
+            },
+            "pl": {
+                "nav_back": "Powrót do strony głównej",
+                "nav_title": "Przepływ Pracy MixBanana",
+                "header_title": "Opanuj Przepływ Pracy",
+                "header_subtitle": "Twój przewodnik krok po kroku do tworzenia zasobów klasy enterprise.",
+                "step1_title": "Uzyskaj Klucz API",
+                "step1_1_title": "1. Zarejestruj się",
+                "step1_1_desc": "Wejdź na",
+                "step1_1_desc_2": "i utwórz konto. Możesz użyć Google lub GitHub.",
+                "step1_2_title": "2. Dodaj Kredyty",
+                "step1_2_desc": "Przejdź do 'Credits'. Dodaj małą kwotę (np. 5$). Krypto (USDC) obsługiwane.",
+                "step1_3_title": "3. Utwórz Klucz",
+                "step1_3_desc": "Przejdź do 'Keys', kliknij 'Create Key'. Nazwij go 'MixBanana'. Skopiuj klucz.",
+                "step2_title": "Wybierz Tryb",
+                "mode_create_title": "✨ Tryb Tworzenia",
+                "mode_create_desc": "Zacznij od zera. Prześlij do 10 referencji i opisz swoją wizję.",
+                "mode_create_tip1": "Najlepsze do: Nowych kampanii, świeżych koncepcji.",
+                "mode_create_tip2": "Wejście: Prompt Tekstowy + Opcjonalne Obrazy.",
+                "mode_var_title": "⚡ Tryb Wariacji",
+                "mode_var_desc": "Prześlij skuteczną kreację. AI wygeneruje wizualne wariacje.",
+                "mode_var_tip1": "Najlepsze do: Testów A/B, odświeżania reklam.",
+                "mode_var_tip2": "Wejście: Jeden obraz referencyjny.",
+                "mode_exp_title": "🌍 Tryb Ekspansji",
+                "mode_exp_desc": "Pomiń generowanie, przejdź do formatowania. Natychmiast zmień rozmiar lub przetłumacz.",
+                "mode_exp_tip1": "Najlepsze do: Lokalizacji, zmiany rozmiaru.",
+                "mode_exp_tip2": "Wejście: Gotowy zasób.",
+                "step3_title": "Zarządzaj i Pobieraj",
+                "lib_title": "Twoja Biblioteka",
+                "lib_desc": "Każdy projekt jest zapisywany lokalnie. Wróć do 'Minionych Kreacji', aby pobrać.",
+                "lib_pro_title": "PRO TIP:",
+                "lib_pro_desc": "Użyj 'Pobierz Wszystko (ZIP)', aby otrzymać uporządkowany folder.",
+                "support_title": "Masz pytania?",
+                "discord_title": "Dołącz do Społeczności",
+                "discord_desc": "Uzyskaj pomoc i dziel się swoimi kreacjami.",
+                "dev_title": "Wspieraj Rozwój",
+                "dev_desc": "Znalazłeś błąd? Zostaw napiwek, aby utrzymać serwery.",
+                "footer_rights": "&copy; 2025 MixBanana. Wszelkie prawa zastrzeżone."
+            },
+            "ar": {
+                "nav_back": "العودة للرئيسية",
+                "nav_title": "سير عمل MixBanana",
+                "header_title": "أتقن سير العمل",
+                "header_subtitle": "دليلك خطوة بخطوة لإنشاء أصول بمستوى المؤسسات.",
+                "step1_title": "احصل على مفتاح API",
+                "step1_1_title": "1. التسجيل",
+                "step1_1_desc": "اذهب إلى",
+                "step1_1_desc_2": "وأنشئ حسابًا. يمكنك استخدام جوجل أو جيت هب.",
+                "step1_2_title": "2. إضافة رصيد",
+                "step1_2_desc": "انتقل إلى 'Credits'. أضف مبلغًا صغيرًا (مثل 5 دولارات). العملات الرقمية مدعومة.",
+                "step1_3_title": "3. إنشاء مفتاح",
+                "step1_3_desc": "اذهب إلى 'Keys'، انقر 'Create Key'. سمه 'MixBanana'. انسخ هذا المفتاح.",
+                "step2_title": "اختر الوضع",
+                "mode_create_title": "✨ وضع الإنشاء",
+                "mode_create_desc": "ابدأ من الصفر. حمل ما يصل إلى 10 مراجع وصف رؤيتك.",
+                "mode_create_tip1": "الأفضل لـ: الحملات الجديدة، المفاهيم الجديدة.",
+                "mode_create_tip2": "الإدخال: نص + صور اختيارية.",
+                "mode_var_title": "⚡ وضع التنويع",
+                "mode_var_desc": "حمل إبداعًا ناجحًا. سيولد الذكاء الاصطناعي تنويعات بصرية.",
+                "mode_var_tip1": "الأفضل لـ: اختبارات A/B، تحديث الإعلانات.",
+                "mode_var_tip2": "الإدخال: صورة مرجعية واحدة.",
+                "mode_exp_title": "🌍 وضع التوسع",
+                "mode_exp_desc": "تخطى التوليد وانتقل للتنسيق. غير الحجم أو ترجم الأصول الموجودة فورًا.",
+                "mode_exp_tip1": "الأفضل لـ: التعريب، تغيير الحجم.",
+                "mode_exp_tip2": "الإدخال: أصل مكتمل.",
+                "step3_title": "إدارة وتحميل",
+                "lib_title": "مكتبة أصولك",
+                "lib_desc": "يتم حفظ كل مشروع محليًا. عد إلى 'الإبداعات السابقة' للتحميل.",
+                "lib_pro_title": "نصيحة محترف:",
+                "lib_pro_desc": "استخدم زر 'تحميل الكل (ZIP)' للحصول على مجلد منظم.",
+                "support_title": "هل لديك أسئلة؟",
+                "discord_title": "انضم للمجتمع",
+                "discord_desc": "احصل على المساعدة وشارك إبداعاتك.",
+                "dev_title": "دعم التطوير",
+                "dev_desc": "وجدت خطأ؟ اترك إكرامية للمساعدة في تشغيل الخوادم.",
+                "footer_rights": "&copy; 2025 MixBanana. جميع الحقوق محفوظة."
+            },
+            "id": {
+                "nav_back": "Kembali ke Beranda",
+                "nav_title": "Alur Kerja MixBanana",
+                "header_title": "Kuasai Alur Kerja",
+                "header_subtitle": "Panduan langkah demi langkah untuk membuat aset tingkat perusahaan.",
+                "step1_title": "Dapatkan Kunci API",
+                "step1_1_title": "1. Daftar",
+                "step1_1_desc": "Buka",
+                "step1_1_desc_2": "dan buat akun. Gunakan Google atau GitHub.",
+                "step1_2_title": "2. Tambah Kredit",
+                "step1_2_desc": "Buka 'Credits'. Tambah jumlah kecil (misal $5). Kripto (USDC) didukung.",
+                "step1_3_title": "3. Buat Kunci",
+                "step1_3_desc": "Buka 'Keys', klik 'Create Key'. Beri nama 'MixBanana'. Salin kunci ini.",
+                "step2_title": "Pilih Mode",
+                "mode_create_title": "✨ Mode Penciptaan",
+                "mode_create_desc": "Mulai dari nol. Unggah hingga 10 referensi dan jelaskan visi Anda.",
+                "mode_create_tip1": "Terbaik untuk: Kampanye baru, konsep segar.",
+                "mode_create_tip2": "Input: Teks + Gambar Opsional.",
+                "mode_var_title": "⚡ Mode Variasi",
+                "mode_var_desc": "Unggah materi iklan sukses. AI akan membuat variasi visual.",
+                "mode_var_tip1": "Terbaik untuk: Tes A/B, menyegarkan iklan.",
+                "mode_var_tip2": "Input: Satu Gambar Referensi.",
+                "mode_exp_title": "🌍 Mode Ekspansi",
+                "mode_exp_desc": "Langsung ke format. Ubah ukuran atau terjemahkan aset secara instan.",
+                "mode_exp_tip1": "Terbaik untuk: Lokalisasi, ubah ukuran.",
+                "mode_exp_tip2": "Input: Aset Selesai.",
+                "step3_title": "Kelola & Unduh",
+                "lib_title": "Pustaka Aset Anda",
+                "lib_desc": "Setiap proyek disimpan secara lokal. Kunjungi 'Kreasi Sebelumnya' untuk mengunduh.",
+                "lib_pro_title": "TIPS PRO:",
+                "lib_pro_desc": "Gunakan 'Unduh Semua (ZIP)' untuk folder yang rapi.",
+                "support_title": "Masih ada pertanyaan?",
+                "discord_title": "Gabung Komunitas",
+                "discord_desc": "Dapatkan bantuan dan bagikan kreasi Anda.",
+                "dev_title": "Dukung Pengembangan",
+                "dev_desc": "Menemukan bug? Berikan tip untuk menjaga server tetap berjalan.",
+                "footer_rights": "&copy; 2025 MixBanana. Hak cipta dilindungi undang-undang."
+            },
+            "ms": {
+                "nav_back": "Kembali ke Laman Utama",
+                "nav_title": "Aliran Kerja MixBanana",
+                "header_title": "Kuasai Aliran Kerja",
+                "header_subtitle": "Panduan langkah demi langkah untuk mencipta aset gred perusahaan.",
+                "step1_title": "Dapatkan Kunci API",
+                "step1_1_title": "1. Daftar",
+                "step1_1_desc": "Pergi ke",
+                "step1_1_desc_2": "dan cipta akaun. Gunakan Google atau GitHub.",
+                "step1_2_title": "2. Tambah Kredit",
+                "step1_2_desc": "Pergi ke 'Credits'. Tambah jumlah kecil (cth $5). Kripto (USDC) disokong.",
+                "step1_3_title": "3. Cipta Kunci",
+                "step1_3_desc": "Pergi ke 'Keys', klik 'Create Key'. Namakan 'MixBanana'. Salin kunci ini.",
+                "step2_title": "Pilih Mod",
+                "mode_create_title": "✨ Mod Penciptaan",
+                "mode_create_desc": "Mula dari kosong. Muat naik sehingga 10 rujukan dan jelaskan visi anda.",
+                "mode_create_tip1": "Terbaik untuk: Kempen baru, konsep segar.",
+                "mode_create_tip2": "Input: Teks + Gambar Pilihan.",
+                "mode_var_title": "⚡ Mod Variasi",
+                "mode_var_desc": "Muat naik kreatif berjaya. AI akan menjana variasi visual.",
+                "mode_var_tip1": "Terbaik untuk: Ujian A/B, menyegarkan iklan.",
+                "mode_var_tip2": "Input: Satu Gambar Rujukan.",
+                "mode_exp_title": "🌍 Mod Pengembangan",
+                "mode_exp_desc": "Terus ke format. Ubah saiz atau terjemah aset serta-merta.",
+                "mode_exp_tip1": "Terbaik untuk: Penyetempatan, ubah saiz.",
+                "mode_exp_tip2": "Input: Aset Selesai.",
+                "step3_title": "Urus & Muat Turun",
+                "lib_title": "Pustaka Aset Anda",
+                "lib_desc": "Setiap projek disimpan secara tempatan. Lawati 'Kreasi Lepas' untuk muat turun.",
+                "lib_pro_title": "TIP PRO:",
+                "lib_pro_desc": "Gunakan 'Muat Turun Semua (ZIP)' untuk folder yang tersusun.",
+                "support_title": "Masih ada soalan?",
+                "discord_title": "Sertai Komuniti",
+                "discord_desc": "Dapatkan bantuan dan kongsi kreasi anda.",
+                "dev_title": "Sokong Pembangunan",
+                "dev_desc": "Jumpa pepijat? Tinggalkan tip untuk kekalkan pelayan.",
+                "footer_rights": "&copy; 2025 MixBanana. Hak cipta terpelihara."
+            },
+            "th": {
+                "nav_back": "กลับสู่หน้าหลัก",
+                "nav_title": "ขั้นตอนการทำงาน MixBanana",
+                "header_title": "เชี่ยวชาญขั้นตอนการทำงาน",
+                "header_subtitle": "คู่มือทีละขั้นตอนในการสร้างสินทรัพย์ระดับองค์กร",
+                "step1_title": "รับคีย์ API ของคุณ",
+                "step1_1_title": "1. ลงทะเบียน",
+                "step1_1_desc": "ไปที่",
+                "step1_1_desc_2": "และสร้างบัญชี ใช้ Google หรือ GitHub",
+                "step1_2_title": "2. เพิ่มเครดิต",
+                "step1_2_desc": "ไปที่ 'Credits' เพิ่มจำนวนเล็กน้อย (เช่น $5) รองรับ Crypto (USDC)",
+                "step1_3_title": "3. สร้างคีย์",
+                "step1_3_desc": "ไปที่ 'Keys' คลิก 'Create Key' ตั้งชื่อ 'MixBanana' คัดลอกคีย์นี้",
+                "step2_title": "เลือกโหมดของคุณ",
+                "mode_create_title": "✨ โหมดการสร้างสรรค์",
+                "mode_create_desc": "เริ่มจากศูนย์ อัปโหลดอ้างอิงได้ถึง 10 รายการและอธิบายวิสัยทัศน์ของคุณ",
+                "mode_create_tip1": "ดีที่สุดสำหรับ: แคมเปญใหม่ แนวคิดใหม่",
+                "mode_create_tip2": "อินพุต: ข้อความ + รูปภาพทางเลือก",
+                "mode_var_title": "⚡ โหมดการเปลี่ยนแปลง",
+                "mode_var_desc": "อัปโหลดผลงานที่ประสบความสำเร็จ AI จะสร้างรูปแบบภาพที่หลากหลาย",
+                "mode_var_tip1": "ดีที่สุดสำหรับ: การทดสอบ A/B ปรับปรุงโฆษณา",
+                "mode_var_tip2": "อินพุต: รูปภาพอ้างอิงหนึ่งรูป",
+                "mode_exp_title": "🌍 โหมดการขยาย",
+                "mode_exp_desc": "ข้ามการสร้างและไปที่การจัดรูปแบบ ปรับขนาดหรือแปลสินทรัพย์ที่มีอยู่ทันที",
+                "mode_exp_tip1": "ดีที่สุดสำหรับ: การปรับให้เข้ากับท้องถิ่น ปรับขนาด",
+                "mode_exp_tip2": "อินพุต: สินทรัพย์ที่เสร็จสมบูรณ์",
+                "step3_title": "จัดการและดาวน์โหลด",
+                "lib_title": "ห้องสมุดสินทรัพย์ของคุณ",
+                "lib_desc": "ทุกโครงการจะถูกบันทึกไว้ในเครื่อง กลับไปที่ 'ผลงานที่ผ่านมา' เพื่อดาวน์โหลด",
+                "lib_pro_title": "เคล็ดลับโปร:",
+                "lib_pro_desc": "ใช้ปุ่ม 'ดาวน์โหลดทั้งหมด (ZIP)' เพื่อรับโฟลเดอร์ที่จัดระเบียบ",
+                "support_title": "ยังมีคำถาม?",
+                "discord_title": "เข้าร่วมชุมชน",
+                "discord_desc": "รับความช่วยเหลือและแบ่งปันผลงานของคุณ",
+                "dev_title": "สนับสนุนการพัฒนา",
+                "dev_desc": "เจอบั๊กหรือชอบเครื่องมือนี้? ให้ทิปเพื่อช่วยดูแลเซิร์ฟเวอร์",
+                "footer_rights": "&copy; 2025 MixBanana. สงวนลิขสิทธิ์."
+            },
+            "vi": {
+                "nav_back": "Trở về Trang chủ",
+                "nav_title": "Quy trình MixBanana",
+                "header_title": "Làm chủ Quy trình",
+                "header_subtitle": "Hướng dẫn từng bước để tạo tài sản cấp doanh nghiệp.",
+                "step1_title": "Lấy Khóa API",
+                "step1_1_title": "1. Đăng ký",
+                "step1_1_desc": "Đi đến",
+                "step1_1_desc_2": "và tạo tài khoản. Dùng Google hoặc GitHub.",
+                "step1_2_title": "2. Nạp Credit",
+                "step1_2_desc": "Vào 'Credits'. Nạp một lượng nhỏ (vd: $5). Hỗ trợ Crypto (USDC).",
+                "step1_3_title": "3. Tạo Khóa",
+                "step1_3_desc": "Vào 'Keys', nhấp 'Create Key'. Đặt tên 'MixBanana'. Sao chép khóa này.",
+                "step2_title": "Chọn Chế độ",
+                "mode_create_title": "✨ Chế độ Sáng tạo",
+                "mode_create_desc": "Bắt đầu từ con số không. Tải lên tối đa 10 tham khảo và mô tả ý tưởng.",
+                "mode_create_tip1": "Tốt nhất cho: Chiến dịch mới, khái niệm mới.",
+                "mode_create_tip2": "Đầu vào: Văn bản + Hình ảnh tùy chọn.",
+                "mode_var_title": "⚡ Chế độ Biến thể",
+                "mode_var_desc": "Tải lên một mẫu quảng cáo hiệu quả. AI sẽ tạo ra các biến thể hình ảnh.",
+                "mode_var_tip1": "Tốt nhất cho: Thử nghiệm A/B, làm mới quảng cáo.",
+                "mode_var_tip2": "Đầu vào: Một hình ảnh tham khảo.",
+                "mode_exp_title": "🌍 Chế độ Mở rộng",
+                "mode_exp_desc": "Bỏ qua tạo mới, đi thẳng vào định dạng. Đổi kích thước hoặc dịch ngay lập tức.",
+                "mode_exp_tip1": "Tốt nhất cho: Bản địa hóa, đổi kích thước.",
+                "mode_exp_tip2": "Đầu vào: Tài sản hoàn chỉnh.",
+                "step3_title": "Quản lý & Tải xuống",
+                "lib_title": "Thư viện Tài sản",
+                "lib_desc": "Mỗi dự án được lưu cục bộ. Truy cập lại 'Sáng tạo Trước đây' để tải xuống.",
+                "lib_pro_title": "MẸO PRO:",
+                "lib_pro_desc": "Dùng 'Tải xuống Tất cả (ZIP)' để nhận thư mục được sắp xếp gọn gàng.",
+                "support_title": "Vẫn còn câu hỏi?",
+                "discord_title": "Tham gia Cộng đồng",
+                "discord_desc": "Nhận trợ giúp và chia sẻ các sáng tạo của bạn.",
+                "dev_title": "Hỗ trợ Phát triển",
+                "dev_desc": "Tìm thấy lỗi hoặc thích công cụ này? Để lại tiền tip để duy trì máy chủ.",
+                "footer_rights": "&copy; 2025 MixBanana. Bảo lưu mọi quyền."
+            }
         };
 
         function detectAndSetLanguage() {
+            // Get user's preferred language from browser
             const userLang = navigator.language || navigator.userLanguage;
+            
+            // Try exact match first
             if (translations[userLang]) {
                 changeLanguage(userLang);
                 document.getElementById('language-selector').value = userLang;
                 return;
             }
+
+            // Try base language match (e.g., 'es-MX' -> 'es')
             const baseLang = userLang.split('-')[0];
             if (translations[baseLang]) {
                 changeLanguage(baseLang);
                 document.getElementById('language-selector').value = baseLang;
                 return;
             }
+
+            // Fallback to default (English) if no match
             changeLanguage('en');
             document.getElementById('language-selector').value = 'en';
         }
 
         function changeLanguage(lang) {
+            // Check translation exists
             if (!translations[lang]) return;
+
+            // 1. Update the HTML Lang Attribute (Critical for correct Font Rendering)
             const htmlRoot = document.getElementById('html-root');
             htmlRoot.setAttribute('lang', lang);
+
+            // 2. Handle RTL for Arabic
             if (lang === 'ar') {
                 htmlRoot.setAttribute('dir', 'rtl');
             } else {
                 htmlRoot.setAttribute('dir', 'ltr');
             }
+
+            // Update text content
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(element => {
                 const key = element.getAttribute('data-i18n');
+                // FIX: Check for undefined specifically, so empty strings "" are accepted
                 if (translations[lang][key] !== undefined) {
                     element.innerHTML = translations[lang][key];
                 }
             });
         }
 
+        // Initialize language detection on load
         window.addEventListener('DOMContentLoaded', detectAndSetLanguage);
     </script>
 </body>
