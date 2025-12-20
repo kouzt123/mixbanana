@@ -65,16 +65,20 @@
     <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto relative z-50">
         <div class="flex items-center gap-3">
             <!-- Logo Icon -->
-            <div class="w-10 h-10 bg-banana-yellow rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,225,53,0.3)] shrink-0">
+            <a href="index.html" class="w-10 h-10 bg-banana-yellow rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,225,53,0.3)] shrink-0 transition-transform hover:scale-105">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.5 13.5C8.5 13.5 10 16 14.5 16C19 16 20.5 12 20.5 12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 21C12 21 6 20 4 14C2 8 6 3 12 3" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </div>
+            </a>
             <span class="text-xl font-bold tracking-tight">MixBanana</span>
         </div>
         
         <div class="flex items-center gap-4 md:gap-6">
+            <div class="hidden md:flex gap-6 text-sm text-gray-400 items-center">
+                <a href="workflow.html" class="hover:text-banana-yellow transition-colors" data-i18n="nav_workflow">Workflow</a>
+            </div>
+            
             <!-- Replaced Text Links with Scroll Button -->
             <a href="#modes" class="hidden md:flex items-center gap-2 text-sm font-medium text-banana-yellow border border-banana-yellow/30 bg-banana-yellow/10 px-4 py-2 rounded-full hover:bg-banana-yellow hover:text-black transition-all duration-300">
                 <span data-i18n="nav_explore">Explore Modes</span>
@@ -157,11 +161,6 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                                 </a>
                             </div>
-
-                            <a href="https://beta.mixbanana.com" target="_blank" class="text-xs text-gray-500 hover:text-[#FFE135] transition-colors flex items-center gap-1 self-center sm:self-start">
-                                <span data-i18n="beta_link_text">Beta Version</span>
-                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="rtl:rotate-180"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
                         </div>
                     </div>
 
@@ -337,6 +336,10 @@
     <script>
         const translations = {
             "en": {
+                "nav_workflow": "Workflow",
+                "nav_enterprise": "Enterprise",
+                "nav_solutions": "Solutions",
+                "nav_research": "Research",
                 "nav_explore": "Explore Modes",
                 "hero_badge": "The Future of Marketing",
                 "hero_title_prefix": "Next-Gen",
@@ -349,7 +352,6 @@
                 "card_desc": "A specialized marketing creative generator. Create high-fidelity, multi-language, and multi-ratio assets in seconds using our Bring-Your-Own-Key infrastructure.",
                 "card_cta": "Launch App",
                 "card_cta_key": "Get API Key",
-                "beta_link_text": "Beta Version",
                 "dashboard_loading": "Generating Creative Assets...",
                 
                 // Updated Modes
@@ -381,6 +383,10 @@
                 "faq_a5": "Not directly. However, you can add your Google Gemini Key to your OpenRouter account settings to generate a compatible OpenRouter key. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Learn how to set up BYOK here</a>."
             },
             "zh-CN": {
+                "nav_workflow": "工作流",
+                "nav_enterprise": "企业版",
+                "nav_solutions": "解决方案",
+                "nav_research": "研究",
                 "nav_explore": "探索模式",
                 "hero_badge": "营销的未来",
                 "hero_title_prefix": "面向全球品牌的",
@@ -393,7 +399,6 @@
                 "card_desc": "专业的营销创意生成器。使用我们自带密钥（BYOK）的基础设施，在几秒钟内创建高保真、多语言和多种比例的资产。",
                 "card_cta": "启动应用",
                 "card_cta_key": "获取 API 密钥",
-                "beta_link_text": "访问测试版",
                 "dashboard_loading": "正在生成创意资产...",
                 
                 "mode_1_title": "创作模式",
@@ -424,6 +429,10 @@
                 "faq_a5": "不能直接使用。但是，您可以将 Google Gemini 密钥添加到 OpenRouter 账户设置中，生成兼容的 OpenRouter 密钥。<a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>在此了解如何设置 BYOK</a>。"
             },
             "zh-TW": {
+                "nav_workflow": "工作流",
+                "nav_enterprise": "企業版",
+                "nav_solutions": "解決方案",
+                "nav_research": "研究",
                 "nav_explore": "探索模式",
                 "hero_badge": "行銷的未來",
                 "hero_title_prefix": "面向全球品牌的",
@@ -436,7 +445,6 @@
                 "card_desc": "專業的行銷創意生成器。使用我們自帶密鑰（BYOK）的基礎設施，在幾秒鐘內創建高保真、多語言和多種比例的資產。",
                 "card_cta": "啟動應用",
                 "card_cta_key": "獲取 API 金鑰",
-                "beta_link_text": "訪問測試版",
                 "dashboard_loading": "正在生成創意資產...",
                 
                 "mode_1_title": "創作模式",
@@ -467,6 +475,10 @@
                 "faq_a5": "不能直接使用。但是，您可以將 Google Gemini 金鑰添加到 OpenRouter 帳戶設置中，生成相容的 OpenRouter 金鑰。<a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>在此了解如何設置 BYOK</a>。"
             },
             "es": {
+                "nav_workflow": "Flujo de trabajo",
+                "nav_enterprise": "Empresa",
+                "nav_solutions": "Soluciones",
+                "nav_research": "Investigación",
                 "nav_explore": "Explorar Modos",
                 "hero_badge": "El Futuro del Marketing",
                 "hero_title_prefix": "Soluciones de IA de",
@@ -479,7 +491,6 @@
                 "card_desc": "Un generador creativo de marketing especializado. Cree activos de alta fidelidad, en múltiples idiomas y relaciones de aspecto en segundos.",
                 "card_cta": "Iniciar App",
                 "card_cta_key": "Obtener Clave API",
-                "beta_link_text": "Versión Beta",
                 "dashboard_loading": "Generando Activos Creativos...",
                 
                 "mode_1_title": "Creación",
@@ -510,10 +521,11 @@
                 "faq_a5": "No directamente. Sin embargo, puedes añadir tu clave de Google Gemini a la configuración de tu cuenta de OpenRouter para generar una clave compatible. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Aprende a configurar BYOK aquí</a>."
             },
             "pt": {
-                "nav_explore": "Explorar Modos",
+                "nav_workflow": "Fluxo de trabalho",
                 "nav_enterprise": "Empresarial",
                 "nav_solutions": "Soluções",
                 "nav_research": "Pesquisa",
+                "nav_explore": "Explorar Modos",
                 "hero_badge": "O Futuro do Marketing",
                 "hero_title_prefix": "Soluções de IA de",
                 "hero_title_highlight": "Próxima Geração",
@@ -525,7 +537,6 @@
                 "card_desc": "Um gerador criativo de marketing especializado. Crie ativos de alta fidelidade, multi-idioma e multi-formato em segundos.",
                 "card_cta": "Iniciar App",
                 "card_cta_key": "Obter Chave API",
-                "beta_link_text": "Versão Beta",
                 "dashboard_loading": "Gerando Ativos Criativos...",
                 
                 "mode_1_title": "Criação",
@@ -556,6 +567,10 @@
                 "faq_a5": "Não diretamente. No entanto, você pode adicionar sua chave do Google Gemini às configurações da sua conta OpenRouter para gerar uma chave compatível. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Saiba como configurar BYOK aqui</a>."
             },
             "fr": {
+                "nav_workflow": "Flux de travail",
+                "nav_enterprise": "Entreprise",
+                "nav_solutions": "Solutions",
+                "nav_research": "Recherche",
                 "nav_explore": "Explorer les Modes",
                 "hero_badge": "L'Avenir du Marketing",
                 "hero_title_prefix": "Solutions IA de",
@@ -568,7 +583,6 @@
                 "card_desc": "Générateur créatif marketing spécialisé. Créez des actifs haute fidélité, multilingues et multi-formats en quelques secondes.",
                 "card_cta": "Lancer l'App",
                 "card_cta_key": "Obtenir Clé API",
-                "beta_link_text": "Version Bêta",
                 "dashboard_loading": "Génération des Actifs...",
                 
                 "mode_1_title": "Création",
@@ -599,6 +613,10 @@
                 "faq_a5": "Pas directement. Cependant, vous pouvez ajouter votre clé Google Gemini dans les paramètres de votre compte OpenRouter pour générer une clé compatible. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Apprenez à configurer BYOK ici</a>."
             },
             "de": {
+                "nav_workflow": "Arbeitsablauf",
+                "nav_enterprise": "Unternehmen",
+                "nav_solutions": "Lösungen",
+                "nav_research": "Forschung",
                 "nav_explore": "Modi erkunden",
                 "hero_badge": "Die Zukunft des Marketings",
                 "hero_title_prefix": "Next-Gen",
@@ -611,7 +629,6 @@
                 "card_desc": "Ein spezialisierter Marketing-Generator. Erstellen Sie in Sekunden High-Fidelity-, mehrsprachige und multiformatige Assets.",
                 "card_cta": "App Starten",
                 "card_cta_key": "API-Schlüssel erhalten",
-                "beta_link_text": "Beta-Version",
                 "dashboard_loading": "Generiere Assets...",
                 
                 "mode_1_title": "Erstellung",
@@ -642,6 +659,10 @@
                 "faq_a5": "Nicht direkt. Sie können jedoch Ihren Google Gemini-Schlüssel zu Ihren OpenRouter-Kontoeinstellungen hinzufügen, um einen kompatiblen Schlüssel zu erstellen. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Erfahren Sie hier, wie Sie BYOK einrichten</a>."
             },
             "it": {
+                "nav_workflow": "Flusso di lavoro",
+                "nav_enterprise": "Impresa",
+                "nav_solutions": "Soluzioni",
+                "nav_research": "Ricerca",
                 "nav_explore": "Esplora Modalità",
                 "hero_badge": "Il Futuro del Marketing",
                 "hero_title_prefix": "Soluzioni AI di",
@@ -654,7 +675,6 @@
                 "card_desc": "Un generatore creativo di marketing specializzato. Crea asset ad alta fedeltà, multilingua e multiformato in pochi secondi.",
                 "card_cta": "Avvia App",
                 "card_cta_key": "Ottieni Chiave API",
-                "beta_link_text": "Versione Beta",
                 "dashboard_loading": "Generazione Asset...",
                 
                 "mode_1_title": "Creazione",
@@ -685,6 +705,10 @@
                 "faq_a5": "Non direttamente. Tuttavia, puoi aggiungere la tua chiave Google Gemini alle impostazioni del tuo account OpenRouter per generare una chiave compatibile. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Scopri come configurare BYOK qui</a>."
             },
             "pl": {
+                "nav_workflow": "Przepływ pracy",
+                "nav_enterprise": "Przedsiębiorstwo",
+                "nav_solutions": "Rozwiązania",
+                "nav_research": "Badania",
                 "nav_explore": "Eksploruj Tryby",
                 "hero_badge": "Przyszłość Marketingu",
                 "hero_title_prefix": "Rozwiązania AI",
@@ -697,7 +721,6 @@
                 "card_desc": "Specjalistyczny generator kreatywny dla marketingu. Twórz wysokiej jakości zasoby w wielu językach i formatach w kilka sekund.",
                 "card_cta": "Uruchom Aplikację",
                 "card_cta_key": "Pobierz Klucz API",
-                "beta_link_text": "Wersja Beta",
                 "dashboard_loading": "Generowanie Zasobów...",
                 
                 "mode_1_title": "Tworzenie",
@@ -728,6 +751,10 @@
                 "faq_a5": "Nie bezpośrednio. Możesz jednak dodać swój klucz Google Gemini do ustawień konta OpenRouter, aby wygenerować kompatybilny klucz. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Dowiedz się, jak skonfigurować BYOK tutaj</a>."
             },
             "ar": {
+                "nav_workflow": "سير العمل",
+                "nav_enterprise": "مؤسسة",
+                "nav_solutions": "حلول",
+                "nav_research": "أبحاث",
                 "nav_explore": "استكشف الأوضاع",
                 "hero_badge": "مستقبل التسويق",
                 "hero_title_prefix": "حلول ذكاء اصطناعي",
@@ -740,7 +767,6 @@
                 "card_desc": "مولد إبداعي تسويقي متخصص. أنشئ أصولاً عالية الدقة ومتعددة اللغات والأبعاد في ثوانٍ.",
                 "card_cta": "تشغيل التطبيق",
                 "card_cta_key": "احصل على مفتاح API",
-                "beta_link_text": "النسخة التجريبية",
                 "dashboard_loading": "جاري إنشاء الأصول...",
                 
                 "mode_1_title": "الخلق",
@@ -771,6 +797,10 @@
                 "faq_a5": "ليس مباشرة. ومع ذلك، يمكنك إضافة مفتاح Google Gemini الخاص بك إلى إعدادات حساب OpenRouter لإنشاء مفتاح متوافق. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>تعرف على كيفية إعداد BYOK هنا</a>."
             },
             "id": {
+                "nav_workflow": "Alur Kerja",
+                "nav_enterprise": "Perusahaan",
+                "nav_solutions": "Solusi",
+                "nav_research": "Riset",
                 "nav_explore": "Jelajahi Mode",
                 "hero_badge": "Masa Depan Pemasaran",
                 "hero_title_prefix": "Solusi AI",
@@ -783,7 +813,6 @@
                 "card_desc": "Generator kreatif pemasaran khusus. Buat aset berkualitas tinggi, multi-bahasa, dan multi-rasio dalam hitungan detik.",
                 "card_cta": "Buka Aplikasi",
                 "card_cta_key": "Dapatkan Kunci API",
-                "beta_link_text": "Versi Beta",
                 "dashboard_loading": "Membuat Aset Kreatif...",
                 
                 "mode_1_title": "Penciptaan",
@@ -814,10 +843,11 @@
                 "faq_a5": "Tidak secara langsung. Namun, Anda dapat menambahkan Kunci Google Gemini ke pengaturan akun OpenRouter Anda untuk menghasilkan kunci yang kompatibel. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Pelajari cara mengatur BYOK di sini</a>."
             },
             "ms": {
-                "nav_explore": "Terokai Mod",
+                "nav_workflow": "Aliran Kerja",
                 "nav_enterprise": "Perusahaan",
                 "nav_solutions": "Penyelesaian",
                 "nav_research": "Penyelidikan",
+                "nav_explore": "Terokai Mod",
                 "hero_badge": "Masa Depan Pemasaran",
                 "hero_title_prefix": "Penyelesaian AI",
                 "hero_title_highlight": "Generasi Seterusnya",
@@ -829,7 +859,6 @@
                 "card_desc": "Penjana kreatif pemasaran khusus. Cipta aset berkualiti tinggi, pelbagai bahasa dan nisbah dalam beberapa saat.",
                 "card_cta": "Lancar Aplikasi",
                 "card_cta_key": "Dapatkan Kunci API",
-                "beta_link_text": "Versi Beta",
                 "dashboard_loading": "Menjana Aset Kreatif...",
                 
                 "mode_1_title": "Penciptaan",
@@ -860,6 +889,10 @@
                 "faq_a5": "Tidak secara langsung. Walau bagaimanapun, anda boleh menambah Kunci Google Gemini anda ke tetapan akaun OpenRouter untuk menjana kunci yang serasi. <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>Ketahui cara menyediakan BYOK di sini</a>."
             },
             "th": {
+                "nav_workflow": "ขั้นตอนการทำงาน",
+                "nav_enterprise": "องค์กร",
+                "nav_solutions": "โซลูชัน",
+                "nav_research": "วิจัย",
                 "nav_explore": "สำรวจโหมด",
                 "hero_badge": "อนาคตของการตลาด",
                 "hero_title_prefix": "โซลูชัน AI",
@@ -872,7 +905,6 @@
                 "card_desc": "เครื่องสร้างสรรค์การตลาดเฉพาะทาง สร้างสินทรัพย์ความละเอียดสูง หลากภาษา และหลายสัดส่วนในไม่กี่วินาที",
                 "card_cta": "เปิดแอป",
                 "card_cta_key": "รับคีย์ API",
-                "beta_link_text": "เวอร์ชันเบต้า",
                 "dashboard_loading": "กำลังสร้างสินทรัพย์...",
                 
                 "mode_1_title": "การสร้างสรรค์",
@@ -903,10 +935,11 @@
                 "faq_a5": "ไม่ได้โดยตรง อย่างไรก็ตาม คุณสามารถเพิ่มคีย์ Google Gemini ลงในบัญชี OpenRouter ของคุณเพื่อสร้างคีย์ที่เข้ากันได้ <a href='https://openrouter.ai/docs/guides/overview/auth/byok' target='_blank' class='text-banana-yellow hover:underline'>เรียนรู้วิธีตั้งค่า BYOK ที่นี่</a>"
             },
             "vi": {
-                "nav_explore": "Khám Phá Chế Độ",
+                "nav_workflow": "Quy trình",
                 "nav_enterprise": "Doanh nghiệp",
                 "nav_solutions": "Giải pháp",
                 "nav_research": "Nghiên cứu",
+                "nav_explore": "Khám Phá Chế Độ",
                 "hero_badge": "Tương lai của Marketing",
                 "hero_title_prefix": "Giải pháp AI",
                 "hero_title_highlight": "Thế hệ mới",
@@ -918,7 +951,6 @@
                 "card_desc": "Trình tạo sáng tạo tiếp thị chuyên dụng. Tạo tài sản độ trung thực cao, đa ngôn ngữ và đa tỷ lệ trong vài giây.",
                 "card_cta": "Mở Ứng dụng",
                 "card_cta_key": "Lấy Khóa API",
-                "beta_link_text": "Phiên bản Beta",
                 "dashboard_loading": "Đang tạo tài sản...",
                 
                 "mode_1_title": "Sáng tạo",
